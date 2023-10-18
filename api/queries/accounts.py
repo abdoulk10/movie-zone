@@ -21,6 +21,9 @@ class AccountOutWithPassword(AccountOut):
 class AccountQueries(Queries):
 
     def get(self, email: str) -> AccountOutWithPassword:
-
+        with pool.connection() as conn:
+            with conn.cursor() as db:
+                result = db.execute([username])
+                record = 
 
     def create(self, info: AccountIn, hashed_password: str) -> AccountOutWithPassword:
