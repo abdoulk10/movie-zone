@@ -6,32 +6,26 @@ from fastapi import (
     APIRouter,
     Request,
     )
+
+from models import AccountIn, AccountOut, AccountForm, AccountToken
 from jwtdown_fastapi.authentication import Token
 from authenticator import authenticator
+from queries.accounts import AccountQueries, DuplicateAccountError
 
-from pydantic import BaseModel
-from queries.accounts import (
-    AccountIn,
-    AccountOut,
-    AccountQueries,
-    DuplicateAccountError,
-    )
+router = APIRouter()
 
 
-class AccountForm(BaseModel):
-    username: str
-    password: str
+#class AccountForm(BaseModel):
+    #username: str
+    #password: str
 
 
 class AccountToken(Token):
     account: AccountOut
 
 
-class HttpError(BaseModel):
-    detail: str
-
-
-router = APIRouter()
+#class HttpError(BaseModel):
+    #detail: str
 
 
 @router.get("/api/protected", response_model=bool)
@@ -41,20 +35,7 @@ async def get_protected(
     return True
 
 
-@router.get("/token", response_model=AccountToken | None)
-async def get_token(
-    request: Request,
-    account: AccountOut = Depends(authenticator.try_get_current_account_data)
-) -> AccountToken | None:
-    if authenticator.cookie_name in request.cookies:
-        return {
-            "access_toke": request.cookies[authenticator.cookie_name],
-            "type": "Bearer",
-            "account": account,
-        }
-
-
-@router.post("/api/accounts", response_model=AccountToken | HttpError)
+@router.post("/api/accounts", response_model=AccountToken)
 async def create_account(
     info: AccountIn,
     request: Request,
@@ -69,6 +50,19 @@ async def create_account(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="Cannot create an account with those credentials",
         )
-    form = AccountForm(username=info.email, password=info.password)
+    form = AccountForm(username=info.username, password=info.password)
     token = await authenticator.login(response, request, form, accounts)
     return AccountToken(account=account, **token.dict())
+
+
+@router.get("/token", response_model=AccountToken | None)
+async def get_token(
+    request: Request,
+    account: AccountOut = Depends(authenticator.try_get_current_account_data)
+) -> AccountToken | None:
+    if account and authenticator.cookie_name in request.cookies:
+        return {
+            "access_token": request.cookies[authenticator.cookie_name],
+            "type": "Bearer",
+            "account": account,
+        }
