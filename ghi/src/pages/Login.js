@@ -51,7 +51,18 @@ function Login() {
                                 />
                                 <label htmlFor="password">Password</label>
                             </div>
-                            <button className="btn btn=promary" type="submit">
+                            <div className="password">
+                                <input
+                                    onChange={handlePasswordChange}
+                                    placeholder="********"
+                                    required
+                                    type="text"
+                                    name="password"
+                                    className="form-control"
+                                    value={password}
+                                />
+                            </div>
+                            <button className="btn btn=primary" type="submit">
                                 Sign In
                             </button>
                         </form>
@@ -61,7 +72,7 @@ function Login() {
                     </button>
                 </div>
             </div>
-    );
+        );
 }
 
 export default Login;
