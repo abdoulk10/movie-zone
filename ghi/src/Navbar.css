@@ -1,0 +1,67 @@
+.nav-item {
+    -webkit-text-fill-color: black;
+    text-emphasis-color: black;
+}
+
+.navbar {
+    min-height: 90px;
+    background-color: #2aac55!important;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.nav-link {
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    background-color: #594545b3;
+    border: none;
+}
+
+.dropdown-item {
+    color: #ffffff;
+}
+
+.dropdown-item:hover {
+    background-color: whitesmoke;
+}
+
+.dropdown-toggle {
+    color: #ffffff;
+    font-size: 2.5rem;
+    line-height: 1;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 200px;
+    padding: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: normal;
+}
+
+.logo img {
+    align-items: center;
+    width: 180px; /* adjust the size as per your preference */
+    height: 90px; /* this will maintain the aspect ratio of the image */
+    margin: -10px; /* set the left and right margin to auto to center the image horizontally */
+    margin-top: -20px; /* adjust the value as per your preference */
+}
+
+.account-dd{
+    font-size: 28px;
+    color: #e6dede !important;
+}
+
+.home-bookm{
+    font-size: 25px;
+    color: #eaeeed !important;
+}

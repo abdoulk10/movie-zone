@@ -39,28 +39,40 @@ function Login() {
                             <h1>Welcome to Movie Zone! Sign In!</h1>
                         </div>
                         <form onSubmit={handleSubmit} id="user-login">
-                            <div className="form-floating mb-3">
-                                <input
-                                    onChange={handleUsernameChange}
-                                    placeholder="username"
-                                    required
-                                    type="text"
-                                    name="username"
-                                    className="form-control"
-                                    value={password}
-                                />
+                        <div className="form-floating mb-3">
+                            <input
+                                onChange={handleUsernameChange}
+                                placeholder="username"
+                                required
+                                type="text"
+                                name="username"
+                                className="form-control"
+                                value={username}
+                            />
+                                <label htmlFor="username">Username</label>
+                        </div>
+                        <div className="form-floating mb-3">
+                            <input
+                                onChange={handlePasswordChange}
+                                placeholder="********"
+                                required
+                                type="text"
+                                name="password"
+                                className="form-control"
+                                value={password}
+                            />
                                 <label htmlFor="password">Password</label>
-                            </div>
-                            <button className="btn btn=promary" type="submit">
-                                Sign In
-                            </button>
+                        </div>
+                        <button className="btn btn=primary" type="submit">
+                            Sign In
+                        </button>
                         </form>
                     </div>
                     <button className="link-btn" onClick={() => navigate("/signup")}>
                         Not a Member? Click this link to sign up!
                     </button>
-                </div>
             </div>
+        </div>
     );
 }
 

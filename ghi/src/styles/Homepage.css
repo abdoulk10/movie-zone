@@ -1,0 +1,25 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+body {
+    background-size: small;
+    background-position: fixed;
+    opacity: 0.9;
+}
+
+.card-list {
+    perspective: 1000px;
+}
+
+.card-list > div {
+    animation: tornado3D 0.35s;
+}
+
+.movie {
+    color: rgb(215, 199, 199);
+}

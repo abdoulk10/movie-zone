@@ -1,4 +1,5 @@
 function Construct(props) {
+
   return (
     <div className="App">
       <header className="App-header">
@@ -10,7 +11,7 @@ function Construct(props) {
         </h2>
         <h2>
           by or <strong>WELL BEFORE</strong> {props.info.hour}:{props.info.min}{" "}
-          Cohort Time
+          Halloween 2023
         </h2>
       </header>
     </div>
