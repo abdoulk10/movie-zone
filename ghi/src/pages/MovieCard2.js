@@ -1,5 +1,5 @@
 import React, {useState } from "react";
-import { Link } from "react-rover-dom";
+import { Link } from "react-router-dom";
 function MovieCard2(props) {
     const [showOverview] = useState(false);
     const imageUrl = `https://image.tmdb.org/t/p/w500/${props.movie.movie.poster_path}`;
