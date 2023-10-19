@@ -8,7 +8,7 @@ export function getToken() {
 }
 
 export async function getTokenInternal() {
-    const url = `${process.env.REACT_APP_MOVIES_SERVICE_API_HOST}/token`;
+    const url = `${process.env.REACT_APP_API_HOST}/token`;
     try {
         const response = await fetch(url, {
             credentials: "include",
@@ -75,7 +75,7 @@ export function useToken() {
 
     async function logout() {
         if (token) {
-            const url = `${process.env.REACT_APP_MOVIES_SERVICE_API_HOST}/token`;
+            const url = `${process.env.REACT_APP_API_HOST}/token`;
             await fetch(url, { method: "delete", credentials: "include" });
             internalToken = null;
             setToken(null);
@@ -84,7 +84,7 @@ export function useToken() {
     }
 
     async function login(username, password) {
-        const url= `${process.env.REACT_APP_MOVIES_SERVICE_API_HOST}/token`;
+        const url= `${process.env.REACT_APP_API_HOST}/token`;
         const form = new FormData();
         form.append("username", username);
         form.append("password", password);
@@ -103,7 +103,7 @@ export function useToken() {
     }
 
     async function signup(firstName, lastName, email, username, password) {
-        const url = `${process.env.REACT_APP_MOVIES_SERVICE_API_HOST}/signup`;
+        const url = `${process.env.REACT_APP_API_HOST}/signup`;
         const response = await fetch(url, {
             method: "post",
             body: JSON.stringify({
@@ -125,7 +125,7 @@ export function useToken() {
     }
 
     async function update(firstName, lastName, email, username, password) {
-        const url = `${process.env.REACT_APP_MOVIES_SERVICE_API_HOST}/users/${token.user.id}`;
+        const url = `${process.env.REACT_APP_API_HOST}/users/${token.user.id}`;
         const response = await fetch(url, {
             method: "put",
             body: JSON.stringify({
@@ -158,7 +158,7 @@ export const useUser = (token) => {
         }
 
         async function getUser() {
-            const url = `${process.env.REACT_APP_MOVIES_SERVICE_API_HOST}/current_user`;
+            const url = `${process.env.REACT_APP_API_HOST}/current_user`;
             const response = await fetch(url, {
                 credentials: "include",
             });

@@ -23,7 +23,7 @@ function MovieDetail(props) {
         async function fetchMovieDetails() {
         try {
             const response = await fetch(
-                `${process.env.REACT_APP_MOVIES_SERVICE_API_HOST}/movies/${id}/detail`
+                `${process.env.REACT_APP_API_HOST}/movies/${id}/detail`
             );
             const data = await response.json();
             setMovie(data);
@@ -37,7 +37,7 @@ function MovieDetail(props) {
         async function fetchVideos() {
         try {
             const response = await fetch(
-                `${process.env.REACT_APP_MOVIES_SERVICE_API_HOST}/movies/${id}/videos`
+                `${process.env.REACT_APP_API_HOST}/movies/${id}/videos`
             );
             const data = await response.json();
             setVideos(data.results?.slice(0, 2) || []);
@@ -51,7 +51,7 @@ function MovieDetail(props) {
         async function fetchWatchProviders() {
         try {
             const response = await fetch(
-                `${process.env.REACT_APP_MOVIES_SERVICE_API_HOST}/movies/${id}/watch-providers`
+                `${process.env.REACT_APP_API_HOST}/movies/${id}/watch-providers`
             );
             const data = await response.json();
             setWatchProviders(data.results.US?.flatrate?.slice(0, 5) || []);
@@ -65,7 +65,7 @@ function MovieDetail(props) {
         async function fetchReviews() {
         try {
             const response = await fetch(
-                `${process.env.REACT_APP_MOVIES_SERVICE_API_HOST}/movies/${id}/reviews`
+                `${process.env.REACT_APP_API_HOST}/movies/${id}/reviews`
             );
             const data = await response.json();
             setReviews(data.results?.slice(0, 2) || []);
@@ -85,7 +85,7 @@ function MovieDetail(props) {
             movie_id: id,
             user_id: token.user.id,
         };
-        const url = `${process.env.REACT_APP_MOVIES_SERVICE_API_HOST}/movies/bookmarks/${token.user.id}`;
+        const url = `${process.env.REACT_APP_API_HOST}/movies/bookmarks/${token.user.id}`;
         if (!token.user.id) {
             alert("User ID is undefined.");
             return;

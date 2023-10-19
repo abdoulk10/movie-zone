@@ -44,9 +44,8 @@ function Signup() {
             password
         );
         if (response) {
-            navigate("/login");
+            navigate("/homepage");
         } else {
-            isLoggedIn(false);
             navigate("/");
         }
     };

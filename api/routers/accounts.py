@@ -5,7 +5,7 @@ from fastapi import (
     Response,
     APIRouter,
     Request,
-    )
+)
 
 from models import AccountIn, AccountOut, AccountForm, AccountToken
 from jwtdown_fastapi.authentication import Token
@@ -15,17 +15,17 @@ from queries.accounts import AccountQueries, DuplicateAccountError
 router = APIRouter()
 
 
-#class AccountForm(BaseModel):
-    #username: str
-    #password: str
+# class AccountForm(BaseModel):
+# username: str
+# password: str
 
 
 class AccountToken(Token):
     account: AccountOut
 
 
-#class HttpError(BaseModel):
-    #detail: str
+# class HttpError(BaseModel):
+# detail: str
 
 
 @router.get("/api/protected", response_model=bool)
@@ -35,7 +35,7 @@ async def get_protected(
     return True
 
 
-@router.post("/api/accounts", response_model=AccountToken)
+@router.post("/signup", response_model=AccountToken)
 async def create_account(
     info: AccountIn,
     request: Request,
@@ -58,7 +58,7 @@ async def create_account(
 @router.get("/token", response_model=AccountToken | None)
 async def get_token(
     request: Request,
-    account: AccountOut = Depends(authenticator.try_get_current_account_data)
+    account: AccountOut = Depends(authenticator.try_get_current_account_data),
 ) -> AccountToken | None:
     if account and authenticator.cookie_name in request.cookies:
         return {
