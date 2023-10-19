@@ -1,79 +1,47 @@
-import React, { useState } from "react";
-import { useToken, useAuthContext } from "./Authentication";
-import { useNavigate } from "react-router-dom"
-import "../styles/Login.css"
+import useToken from "@galvanize-inc/jwtdown-for-react";
+import { useState } from "react";
 
-function Login() {
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
-    const login = useToken()[1];
-    const { isLoggedIn } = useAuthContext();
-    const navigate = useNavigate();
+const LoginForm = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const { login } = useToken();
 
-    const handleUsernameChange = (e) => {
-        const value = e.target.value;
-        setUsername(value);
-    };
-    const handlePasswordChange = (e) => {
-        const value = e.target.value;
-        setPassword(value);
-    };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    login(username, password);
+    e.target.reset();
+  };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+  return (
+    <div className="card text-bg-light mb-3">
+      <h5 className="card-header">Login</h5>
+      <div className="card-body">
+        <form onSubmit={(e) => handleSubmit(e)}>
+          <div className="mb-3">
+            <label className="form-label">Username:</label>
+            <input
+              name="username"
+              type="text"
+              className="form-control"
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Password:</label>
+            <input
+              name="password"
+              type="password"
+              className="form-control"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <div>
+            <input className="btn btn-primary" type="submit" value="Login" />
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+};
 
-        const error = await login(username, password);
-        if (error) {
-            isLoggedIn(false);
-        } else {
-            navigate("/homepage");
-        }
-        await login(username, password);
-        };
-
-        return (
-            <div className="row">
-                <div className="offset-3 col-6">
-                    <div className="shadow p-4 mt-4">
-                        <div className="text-center">
-                            <h1>Welcome to Movie Zone! Sign In!</h1>
-                        </div>
-                        <form onSubmit={handleSubmit} id="user-login">
-                        <div className="form-floating mb-3">
-                            <input
-                                onChange={handleUsernameChange}
-                                placeholder="username"
-                                required
-                                type="text"
-                                name="username"
-                                className="form-control"
-                                value={username}
-                            />
-                                <label htmlFor="username">Username</label>
-                        </div>
-                        <div className="form-floating mb-3">
-                            <input
-                                onChange={handlePasswordChange}
-                                placeholder="********"
-                                required
-                                type="text"
-                                name="password"
-                                className="form-control"
-                                value={password}
-                            />
-                                <label htmlFor="password">Password</label>
-                        </div>
-                        <button className="btn btn=primary" type="submit">
-                            Sign In
-                        </button>
-                        </form>
-                    </div>
-                    <button className="link-btn" onClick={() => navigate("/signup")}>
-                        Not a Member? Click this link to sign up!
-                    </button>
-            </div>
-        </div>
-    );
-}
-
-export default Login;
+export default LoginForm;

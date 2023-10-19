@@ -6,14 +6,15 @@ import Login from "./pages/Login.js";
 import Moviedetail from "./pages/Moviedetail.js";
 import Logout from "./pages/Logout.js";
 import Signup from "./pages/Signup.js";
-import { AuthProvider, useToken } from "./pages/Authentication.js";
+import { AuthProvider } from "@galvanize-inc/jwtdown-for-react";
+import { useAuthContext } from "@galvanize-inc/jwtdown-for-react";
 import AccountDetailView from "./pages/Accountpage.js";
 import AccountEditForm from "./pages/Accounteditpage.js";
 import Bookmarkedmovies from "./pages/Bookmarked.js";
 import "./App.css";
 
 function GetToken() {
-  useToken();
+  const { token } = useAuthContext();
   return null;
 }
 const domain = /https:\/\/[^/]+/;

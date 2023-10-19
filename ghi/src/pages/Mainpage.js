@@ -8,10 +8,10 @@ function Mainpage() {
             <div className="text-center">
                 <h1 className="display-5 fw-bold">IMDme</h1>
             </div>
-            <div class="d-grid gap-4 mx-auto">
+            <div className="d-grid gap-4 mx-auto">
                 <button
                     type="button"
-                    class="btn btn-lg btn-color btn-hover"
+                    className="btn btn-lg btn-color btn-hover"
                     style={{ fontSize: "1.5rem", padding: "1rem 2rem" }}
                     onClick={() => navigate("/signup")}
                 >
@@ -19,7 +19,7 @@ function Mainpage() {
                 </button>
                 <button
                     type="button"
-                    class="btn btn-lg btn-color2 btn-hover2"
+                    className="btn btn-lg btn-color2 btn-hover2"
                     style={{ fontSize: "1.5rem", padding: "1rem 2rem" }}
                     onClick={() => navigate("/login")}
                 >
