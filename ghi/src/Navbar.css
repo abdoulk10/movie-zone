@@ -1,6 +1,11 @@
+.nav-item {
+    -webkit-text-fill-color: black;
+    text-emphasis-color: black;
+}
+
 .navbar {
     min-height: 90px;
-    background-color: #7d0707!important;
+    background-color: #2aac55!important;
 }
 
 .navbar-toggler {
