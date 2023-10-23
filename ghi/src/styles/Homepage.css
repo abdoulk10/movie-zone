@@ -1,25 +1,57 @@
-.home-page {
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.search_nav {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+}
+
+.search_box {
+    display: flex;
     align-items: center;
 }
 
-
-body {
-    background-size: small;
-    background-position: fixed;
-    opacity: 0.9;
+.home-page {
+    padding: 1.5rem;
+    background-color: #536449;
 }
 
-.card-list {
-    perspective: 1000px;
-}
-
-.card-list > div {
-    animation: tornado3D 0.35s;
+.title {
+    padding-right: 3rem;
+    color: black;
+    margin-bottom: 1.1rem;
+    text-decoration: underline;
 }
 
 .movie {
     color: rgb(215, 199, 199);
 }
+
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.search_box input {
+    border: 0;
+    outline: 0;
+    margin-right: 0.1rem;
+    padding: 0.2rem;
+    border-radius: 1rem;
+ }
+
+ .search_box button {
+    border: 0;
+    outline: 0;
+    background-color: white;
+    padding: 0.2rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+ }
+ .search_box button:hover {
+    background-color: #2aac55;
+ }

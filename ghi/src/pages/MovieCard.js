@@ -1,27 +1,26 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import "../styles/Moviecard.css";
 function MovieCard(props) {
     const [showOverview] = useState(false);
     const imageUrl = `https://image.tmdb.org/t/p/w500/${props.movie.poster_path}`;
 
     return (
         <div className="movie">
-            <div>
-                <p>{props.movie.release_date}</p>
-            </div>
-            <div>
+            <div className="hero">
                 <Link to={`/movies/${props.movie.id}/detail`}>
-                    <img src={imageUrl} alt={props.movie.title} />
+                    <img className="poster" src={props.movie.poster_path ? imageUrl : "https://images.unsplash.com/photo-1540224871915-bc8ffb782bdf?auto=format&fit=crop&q=60&w=800&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjB8fGNpbmVtYXxlbnwwfHwwfHx8MA%3D%3D"} alt={props.movie.title} />
                 </Link>
             </div>
-            <div>
-                <h3>{props.movie.title}</h3>
-                <h4>{props.movie.video}</h4>
-                {showOverview && <h4>{props.movie.overview}</h4>}
-                <h5>{props.movie.adult}</h5>
-                <h6>Rating: {props.movie.vote_average}/10</h6>
-                <h4>{props.movie.video}</h4>
+            <div className="info">
+                <h3 className="title">{props.movie.title}</h3>
+                <div>
+                    <h4 className="rating">{props.movie.vote_average.toFixed(1)}</h4>
+                </div>
+            </div>
+            <div className="overview">
+                <h5 className="title_overview">Overview:</h5>
+                <h6 className="overview_info">{props.movie.overview}</h6>
             </div>
         </div>
     );

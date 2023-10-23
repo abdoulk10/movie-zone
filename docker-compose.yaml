@@ -1,33 +1,27 @@
 volumes:
   mongo-data:
     external: true
+  jwtdown-db-data:
+    external: true
 services:
   mongo:
-    image: mongo
-    restart: always
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: secret
+    image: mongo:5
     volumes:
       - mongo-data:/data/db
-  mongo-express:
-    image: mongo-express
     environment:
       ME_CONFIG_MONGODB_ADMINUSERNAME: admin
       ME_CONFIG_MONGODB_ADMINPASSWORD: secret
       ME_CONFIG_MONGODB_SERVER: mongo
     ports:
-      - "8081:8081"
+      - "8083:8081"
     depends_on:
       - mongo
     restart: always
   fastapi:
     environment:
+      DATABASE_URL: mongodb://example_user:secret@mongodb
+      DB_NAME: db-movie-zone-db
       CORS_HOST: http://localhost:3000
-      DATABASE_URL: mongodb://admin:secret@mongo
-      SIGNING_KEY: ${SIGNING_KEY}
-      CLIENT_ID: ${CLIENT_ID}
-      CLIENT_SECRET: ${CLIENT_SECRET}
     build:
       context: api
       dockerfile: Dockerfile.dev
@@ -43,7 +37,7 @@ services:
     volumes:
       - ./ghi:/app
     ports:
-      - "3000:3000"
+      - "3001:3000"
     environment:
       HOST_OS: ${OS}
       NODE_ENV: development
