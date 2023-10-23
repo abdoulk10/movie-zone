@@ -46,7 +46,7 @@ function Signup() {
         if (response) {
             navigate("/login");
         } else {
-            isLoggedIn(false);
+            isLoggedIn(true);
             navigate("/");
         }
     };

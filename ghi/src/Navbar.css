@@ -5,7 +5,7 @@
 
 .navbar {
     min-height: 90px;
-    background-color: #2aac55!important;
+    background-color: #164a23!important;
 }
 
 .navbar-toggler {
@@ -17,8 +17,9 @@
 }
 
 .dropdown-menu {
-    background-color: #594545b3;
+    background-color: #712929b3;
     border: none;
+    grid-row-start: span;
 }
 
 .dropdown-item {
@@ -63,5 +64,5 @@
 
 .home-bookm{
     font-size: 25px;
-    color: #eaeeed !important;
+    color: #b07b70 !important;
 }

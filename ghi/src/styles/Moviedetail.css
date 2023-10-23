@@ -18,9 +18,13 @@ body {
 }
 /* Set the layout for the card list to a 4x4 grid */
 .card-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 /* Apply a hover effect to the search button */
 .button:hover {
@@ -194,4 +198,3 @@ svg {
     color: white;
     -webkit-text-stroke: .3px black;
 }
-
