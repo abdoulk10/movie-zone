@@ -1,15 +1,23 @@
 .nav-item {
     -webkit-text-fill-color: black;
     text-emphasis-color: black;
+    text-align: left;
+    border-left-width: 0cqh;
+    background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
 }
 
 .navbar {
-    min-height: 90px;
-    background-color: #2aac55!important;
+    background-color: #333; /* Background color of the navbar */
+    color: #fff; /* Text color for links and text within the navbar */
+    padding: 10px; /* Padding around the content within the navbar */
+    display: flex; /* Display elements in a row (horizontal) */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center;
+    margin-right: 20px;
 }
 
 .navbar-toggler {
-    border: none;
+    border: black;
 }
 
 .nav-link {
@@ -17,12 +25,14 @@
 }
 
 .dropdown-menu {
-    background-color: #594545b3;
-    border: none;
+    list-style: none; /* Remove bullet points for the list items */
+    padding: 0; /* Remove default padding for the list */
+    display: flex;
 }
 
 .dropdown-item {
-    color: #ffffff;
+    margin-right: 20px;
+    text-decoration: #e6dede;
 }
 
 .dropdown-item:hover {

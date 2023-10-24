@@ -5,10 +5,10 @@
 }
 
 .text-end{
-    color: #ffff;
-    padding-left: 70px;
-    text-align: center;
-    -webkit-text-stroke: 5px #0000;
+  color: #ffff;
+  padding-left: 70px;
+  text-align: center;
+  -webkit-text-stroke: 5px #0000;
 }
 
 .text-center{
@@ -16,6 +16,7 @@
     -webkit-text-stroke: 15px #0000;
 }
 .password{
-    color: #ffff;
+  color: #ffff;
 }
+
 
