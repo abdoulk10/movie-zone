@@ -1,13 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;800&display=swap");
+
+
 .movie-detail {
-    background-color: #536449;
+    padding: 25px;
+    height: 50%;
+    .text{
+        color: #545454;
+        width: 100%;
+}
 }
 
 .title {
-    color: black;
+    text-transform: uppercase;
+	margin-bottom: 5px;
 }
 
 .reviews-container {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .review {
@@ -17,6 +26,7 @@
   border: 1px solid black;
   box-shadow: 0px 8px 0px 0px black;
   border-radius: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .release_date {
@@ -33,8 +43,12 @@
 }
 
 .details_overview {
-    font-size: 16px;
-    margin-bottom: 30px;
+    background-color: #2aac55;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    box-shadow: 0px 8px 0px 0px black;
+    border-radius: 0.5rem;
 }
 
 .review_header {
