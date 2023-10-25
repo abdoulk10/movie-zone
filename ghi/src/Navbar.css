@@ -1,32 +1,50 @@
 .nav-item {
-    -webkit-text-fill-color: black;
-    text-emphasis-color: black;
+    text-align: center;
+    color: white;
 }
 
 .navbar {
     min-height: 90px;
-    background-color: #2aac55!important;
+    background-color: gray;
+    color: black;
 }
 
 .navbar-toggler {
     border: none;
+    background-color: grey;
 }
 
 .nav-link {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+
+    list-style: none;
+    margin: 0;
+    background:grey;
+    display: flex-start;
+    flex-flow: row;
     font-weight: bold;
+    text-align: center;
+    color: whitesmoke;
+    background: url(https://img.freepik.com/free-photo/crop-clapperboard-near-tickets-popcorn_23-2147698940.jpg?w=826&t=st=1698240471~exp=1698241071~hmac=9908bd6344982c5ed054b89725bc4656e201702747d9baeb1fe3a3d803e98ead);
+
 }
 
 .dropdown-menu {
-    background-color: #594545b3;
-    border: none;
+    text-wrap: nowrap;
+    background-color: grey;
+    background: url(https://img.freepik.com/free-photo/crop-clapperboard-near-tickets-popcorn_23-2147698940.jpg?w=826&t=st=1698240471~exp=1698241071~hmac=9908bd6344982c5ed054b89725bc4656e201702747d9baeb1fe3a3d803e98ead);
 }
 
-.dropdown-item {
-    color: #ffffff;
+.dropdown-menu {
+    color: rgb(228, 32, 32);
+    text-align: center;
 }
 
 .dropdown-item:hover {
     background-color: whitesmoke;
+    text-align: center;
 }
 
 .dropdown-toggle {
@@ -43,25 +61,4 @@
     padding: 10px;
 }
 
-.logo {
-    display: flex;
-    align-items: normal;
-}
 
-.logo img {
-    align-items: center;
-    width: 180px; /* adjust the size as per your preference */
-    height: 90px; /* this will maintain the aspect ratio of the image */
-    margin: -10px; /* set the left and right margin to auto to center the image horizontally */
-    margin-top: -20px; /* adjust the value as per your preference */
-}
-
-.account-dd{
-    font-size: 28px;
-    color: #e6dede !important;
-}
-
-.home-bookm{
-    font-size: 25px;
-    color: #eaeeed !important;
-}
