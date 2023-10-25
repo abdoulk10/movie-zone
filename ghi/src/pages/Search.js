@@ -19,6 +19,11 @@ function SearchComponent() {
     setFilteredData(filtered);
   }, [data, searchQuery]);
 
+  // project name on left, search on right
+// Search Movies: search bar
+// all {genre} movies followed by carousel movie reel
+// the above is to note what I need to complete, will erase after
+
   return (
     <div>
       <input
