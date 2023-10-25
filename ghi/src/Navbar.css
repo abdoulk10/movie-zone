@@ -1,28 +1,4 @@
 .nav-item {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    -webkit-text-fill-color: black;
-    text-emphasis-color: black;
-    text-align: left;
-    border-left-width: 0cqh;
-    background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
-}
-
-.navbar {
-    background-color: #333; /* Background color of the navbar */
-    color: #fff; /* Text color for links and text within the navbar */
-    padding: 10px; /* Padding around the content within the navbar */
-    display: flex; /* Display elements in a row (horizontal) */
-    justify-content: space-between; /* Space items evenly */
-    align-items: center;
-    margin-right: 20px;
-}
-
-.navbar-toggler {
-    border: black;
-=======
-=======
->>>>>>> a1644934287da4a68673d8b75cb58c4cf31817c7
     text-align: center;
     color: white;
 }
@@ -36,10 +12,6 @@
 .navbar-toggler {
     border: none;
     background-color: grey;
-<<<<<<< HEAD
->>>>>>> a1644934287da4a68673d8b75cb58c4cf31817c7
-=======
->>>>>>> a1644934287da4a68673d8b75cb58c4cf31817c7
 }
 
 .nav-link {
@@ -60,17 +32,6 @@
 }
 
 .dropdown-menu {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    list-style: none; /* Remove bullet points for the list items */
-    padding: 0; /* Remove default padding for the list */
-    display: flex;
-}
-
-.dropdown-item {
-    margin-right: 20px;
-    text-decoration: #e6dede;
-=======
     text-wrap: nowrap;
     background-color: grey;
     background: url(https://img.freepik.com/free-photo/crop-clapperboard-near-tickets-popcorn_23-2147698940.jpg?w=826&t=st=1698240471~exp=1698241071~hmac=9908bd6344982c5ed054b89725bc4656e201702747d9baeb1fe3a3d803e98ead);
@@ -79,17 +40,6 @@
 .dropdown-menu {
     color: rgb(228, 32, 32);
     text-align: center;
->>>>>>> a1644934287da4a68673d8b75cb58c4cf31817c7
-=======
-    text-wrap: nowrap;
-    background-color: grey;
-    background: url(https://img.freepik.com/free-photo/crop-clapperboard-near-tickets-popcorn_23-2147698940.jpg?w=826&t=st=1698240471~exp=1698241071~hmac=9908bd6344982c5ed054b89725bc4656e201702747d9baeb1fe3a3d803e98ead);
-}
-
-.dropdown-menu {
-    color: rgb(228, 32, 32);
-    text-align: center;
->>>>>>> a1644934287da4a68673d8b75cb58c4cf31817c7
 }
 
 .dropdown-item:hover {
@@ -110,5 +60,3 @@
     margin-right: 200px;
     padding: 10px;
 }
-
-

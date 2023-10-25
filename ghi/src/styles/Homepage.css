@@ -1,54 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-.home-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.logo {
-  width: 200px; /* adjust to the size of your logo */
-  height: auto; /* adjust to the size of your logo */
-  position: absolute;
-  top: 20px; /* adjust to the desired distance from the top of the page */
-  left: 50%; /* center the logo horizontally */
-  transform: translateX(-50%); /* center the logo horizontally */
-}
-
-body {
-    background: linear-gradient(black, white);
-    background-size: small;
-    background-position: fixed;
-    opacity: 0.9;
-}
-
-.mascot {
-  width: 100px; /* adjust the size of the mascot image */
-  height: auto; /* adjust the size of the mascot image */
-  position: absolute;
-  top: 100px; /* adjust the distance from the top of the page */
-  left: 50px; /* adjust the distance from the left of the page */
-}
-
-@keyframes tornado3D {
-  from {
-    transform: translateZ(-500px) rotateY(-85deg);
-    opacity: 0;
-  }
-  to {
-    transform: translateZ(0) rotateY(0deg);
-    opacity: 1;
-  }
-}
-
-.card-list {
-  perspective: 1000px;
-}
-
-.card-list > div {
-  animation: tornado3D 0.35s;
-=======
 *{
     box-sizing: border-box;
     margin: 0;
@@ -77,49 +26,15 @@ body {
     background: url(https://img.freepik.com/free-photo/crop-clapperboard-near-tickets-popcorn_23-2147698940.jpg?w=826&t=st=1698240471~exp=1698241071~hmac=9908bd6344982c5ed054b89725bc4656e201702747d9baeb1fe3a3d803e98ead) ;
 }
 
-=======
-*{
-    box-sizing: border-box;
-    margin: 0;
-    text-decoration: aliceblue;
-}
-
-.div {
-    text-decoration: aliceblue;
-}
-.search_nav {
-    text-decoration: aliceblue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.search_box {
-    display: flex;
-    align-items: center;
-}
-
-.home-page {
-    text-decoration: aliceblue;
-    padding: 1.5rem;
-    background-color: #536449;
-    background: url(https://img.freepik.com/free-photo/crop-clapperboard-near-tickets-popcorn_23-2147698940.jpg?w=826&t=st=1698240471~exp=1698241071~hmac=9908bd6344982c5ed054b89725bc4656e201702747d9baeb1fe3a3d803e98ead) ;
-}
-
->>>>>>> a1644934287da4a68673d8b75cb58c4cf31817c7
 .title {
     padding-right: 3rem;
     color: black;
     margin-bottom: 1.1rem;
     text-decoration: underline;
-<<<<<<< HEAD
->>>>>>> a1644934287da4a68673d8b75cb58c4cf31817c7
-=======
->>>>>>> a1644934287da4a68673d8b75cb58c4cf31817c7
 }
 
 .movie {
-  color: black;
+    color: rgb(215, 199, 199);
 }
 
 .movies {
