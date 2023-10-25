@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     box-sizing: border-box;
     margin: 0;
@@ -31,6 +32,56 @@
     color: black;
     margin-bottom: 1.1rem;
     text-decoration: underline;
+=======
+.home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo {
+  width: 200px; /* adjust to the size of your logo */
+  height: auto; /* adjust to the size of your logo */
+  position: absolute;
+  top: 20px; /* adjust to the desired distance from the top of the page */
+  left: 50%; /* center the logo horizontally */
+  transform: translateX(-50%); /* center the logo horizontally */
+}
+
+body {
+    background: linear-gradient(black, white);
+    background-size: small;
+    background-position: fixed;
+    opacity: 0.9;
+}
+
+.mascot {
+  width: 100px; /* adjust the size of the mascot image */
+  height: auto; /* adjust the size of the mascot image */
+  position: absolute;
+  top: 100px; /* adjust the distance from the top of the page */
+  left: 50px; /* adjust the distance from the left of the page */
+}
+
+@keyframes tornado3D {
+  from {
+    transform: translateZ(-500px) rotateY(-85deg);
+    opacity: 0;
+  }
+  to {
+    transform: translateZ(0) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+.card-list {
+  perspective: 1000px;
+}
+
+.card-list > div {
+  animation: tornado3D 0.35s;
+>>>>>>> c5dd279996aac9737be280cab61c66b7dc52da96
 }
 
 .movie {
