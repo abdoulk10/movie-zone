@@ -24,7 +24,6 @@ function Nav() {
                             </NavLink>
                         </li>
                         <li className="nav-item">
-<<<<<<< HEAD
                             <NavLink
                                 className="nav-link active"
                                 aria-current="page"
@@ -50,11 +49,6 @@ function Nav() {
                             >
                                 Latest Movies
                             </NavLink>
-=======
-                          <NavLink className="nav-link active" aria-current="page" to="/Bookmarkedmovies">
-                          Bookmarks
-                          </NavLink>
->>>>>>> 9d932fd9746e76da53617cf9edecd6ab85768174
                         </li>
                     </ul>
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
