@@ -26,7 +26,7 @@ services:
       context: api
       dockerfile: Dockerfile.dev
     ports:
-      - 8000:8000
+      - 8001:8000
     volumes:
       - ./api:/app
 
@@ -37,7 +37,7 @@ services:
     volumes:
       - ./ghi:/app
     ports:
-      - "3001:3000"
+      - "3000:3000"
     environment:
       HOST_OS: ${OS}
       NODE_ENV: development

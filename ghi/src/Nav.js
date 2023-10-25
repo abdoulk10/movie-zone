@@ -31,9 +31,27 @@ function Nav() {
                             <NavLink
                                 className="nav-link active"
                                 aria-current="page"
-                                to="/Bookmarkedmovies"
+                                to="/TrendingMovies"
                             >
-                                Bookmarks
+                                Trending Movies
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink
+                                className="nav-link active"
+                                aria-current="page"
+                                to="/TopRatedMovies"
+                            >
+                                Top Rated
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink
+                                className="nav-link active"
+                                aria-current="page"
+                                to="/LatestMovies"
+                            >
+                                Latest Movies
                             </NavLink>
                         </li>
                     </ul>

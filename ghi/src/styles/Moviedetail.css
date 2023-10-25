@@ -42,3 +42,7 @@
     text-decoration: underline;
     font-weight: bold;
 }
+
+.no_reviews {
+    font-size: 2rem;
+}
