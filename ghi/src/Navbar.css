@@ -1,33 +1,50 @@
 .nav-item {
-    -webkit-text-fill-color: black;
-    text-emphasis-color: black;
+    text-emphasis-color: White;
+    text-align: left;
+    border-left-width: 0cqh;
+    background: url(https://img.freepik.com/free-photo/crop-clapperboard-near-tickets-popcorn_23-2147698940.jpg?w=826&t=st=1698240471~exp=1698241071~hmac=9908bd6344982c5ed054b89725bc4656e201702747d9baeb1fe3a3d803e98ead);
 }
 
+.home-bm {
+    font-family: sans-serif;
+}
 .navbar {
-    min-height: 90px;
-    background-color: #164a23!important;
+    background-color: #333; /* Background color of the navbar */
+    color: #fff; /* Text color for links and text within the navbar */
+    padding: 10px; /* Padding around the content within the navbar */
+    display: flex; /* Display elements in a row (horizontal) */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center;
+    margin-right: 20px;
 }
 
-.navbar-toggler {
-    border: none;
-}
 
 .nav-link {
-    font-weight: bold;
+    font-family: sans-serif;
+    margin-right: 20px;
+    color: white;
+    text-align: justify center;
+    color: whitesmoke;
+    background: url(https://img.freepik.com/free-photo/crop-clapperboard-near-tickets-popcorn_23-2147698940.jpg?w=826&t=st=1698240471~exp=1698241071~hmac=9908bd6344982c5ed054b89725bc4656e201702747d9baeb1fe3a3d803e98ead);
+
 }
 
+
 .dropdown-menu {
-    background-color: #712929b3;
-    border: none;
-    grid-row-start: span;
+    list-style: none; /* Remove bullet points for the list items */
+    padding: 0; /* Remove default padding for the list */
+    display: flex;
 }
 
 .dropdown-item {
-    color: #ffffff;
+    margin-right: 20px;
+    text-decoration: #e6dede;
+    color: white;
 }
 
 .dropdown-item:hover {
     background-color: whitesmoke;
+    text-align: center;
 }
 
 .dropdown-toggle {
@@ -42,27 +59,4 @@
     justify-content: center;
     margin-right: 200px;
     padding: 10px;
-}
-
-.logo {
-    display: flex;
-    align-items: normal;
-}
-
-.logo img {
-    align-items: center;
-    width: 180px; /* adjust the size as per your preference */
-    height: 90px; /* this will maintain the aspect ratio of the image */
-    margin: -10px; /* set the left and right margin to auto to center the image horizontally */
-    margin-top: -20px; /* adjust the value as per your preference */
-}
-
-.account-dd{
-    font-size: 28px;
-    color: #e6dede !important;
-}
-
-.home-bookm{
-    font-size: 25px;
-    color: #b07b70 !important;
 }

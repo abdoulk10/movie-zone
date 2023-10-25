@@ -1,35 +1,39 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
 import "../styles/Homepage.css";
-import "../App.css";
 
-function HomePage() {
-  const API_URL = "https://api.themoviedb.org/3/movie/popular?api_key=ade9ac2663bdc8bc0eae7b07d7787d12";
-  const API_SEARCH = "https://api.themoviedb.org/3/search/movie?api_key=ade9ac2663bdc8bc0eae7b07d7787d12&query=";
-
-  const [movies, setMovies] = useState([]);
+const TopRatedMovies = () => {
+  const TOP_RATED_URL =
+    "https://api.themoviedb.org/3/movie/top_rated?api_key=ade9ac2663bdc8bc0eae7b07d7787d12";
+  const API_SEARCH =
+    "https://api.themoviedb.org/3/search/movie?api_key=ade9ac2663bdc8bc0eae7b07d7787d12&query=";
+  const [topRatedMovies, setTopRatedMovies] = useState([]);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    fetch(API_URL)
+    fetch(TOP_RATED_URL)
       .then((response) => response.json())
-      .then((data) => setMovies(data.results));
+      .then((data) => {
+        setTopRatedMovies(data.results);
+      })
+      .catch((error) => {
+        console.error("Error fetching top-rated movies: ", error);
+      });
   }, []);
-  console.log(movies);
 
   const handleSearch = (e) => {
     e.preventDefault();
 
     fetch(API_SEARCH + search)
       .then((response) => response.json())
-      .then((data) => setMovies(data.results));
+      .then((data) => setTopRatedMovies(data.results));
   };
 
   return (
     <div className="home-page">
       <div className="search_nav">
         <div className="title">
-          <h1>Movies</h1>
+          <h1>Top Rated Movies</h1>
         </div>
         <div className="search_box">
           <form onSubmit={handleSearch}>
@@ -39,12 +43,12 @@ function HomePage() {
         </div>
       </div>
       <div className="movies">
-        {movies?.map((movie) => (
+        {topRatedMovies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
         ))}
       </div>
     </div>
   );
-}
+};
 
-export default HomePage;
+export default TopRatedMovies;

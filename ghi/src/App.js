@@ -6,15 +6,16 @@ import Login from "./pages/Login.js";
 import Moviedetail from "./pages/Moviedetail.js";
 import Logout from "./pages/Logout.js";
 import Signup from "./pages/Signup.js";
-import { AuthProvider } from "@galvanize-inc/jwtdown-for-react";
-import { useAuthContext } from "@galvanize-inc/jwtdown-for-react";
+import { AuthProvider, useToken } from "./pages/Authentication.js";
 import AccountDetailView from "./pages/Accountpage.js";
 import AccountEditForm from "./pages/Accounteditpage.js";
-import Bookmarkedmovies from "./pages/Bookmarked.js";
+import TrendingMovies from "./pages/TrendingMovies.js";
+import TopRatedMovies from "./pages/TopRatedMovies.js";
+import LatestMovies from "./pages/LatestMovies.js";
 import "./App.css";
 
 function GetToken() {
-  const { token } = useAuthContext();
+  useToken();
   return null;
 }
 const domain = /https:\/\/[^/]+/;
@@ -28,7 +29,9 @@ function App() {
         <Nav />
         <div className="container">
           <Routes>
-            <Route path="/Bookmarkedmovies" element={<Bookmarkedmovies />} />
+            <Route path="/LatestMovies" element={<LatestMovies />} />
+            <Route path="/TrendingMovies" element={<TrendingMovies />} />
+            <Route path="/TopRatedMovies" element={<TopRatedMovies />} />
             <Route path="/" element={<Mainpage />} />
             <Route path="/logout" element={<Logout />} />
             <Route path="/signup" element={<Signup />} />
