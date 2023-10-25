@@ -36,11 +36,7 @@ return (
                 </div>
                 <div className="search_box">
                     <form onSubmit={handleSearch}>
-<<<<<<< HEAD
                         <input value={term} onChange={(e) => setTerm(e.target.value)}/>
-=======
-                        <input onChange={(e) => setSearch(e.target.value)}/>
->>>>>>> c5dd279996aac9737be280cab61c66b7dc52da96
                         <button>Search</button>
                     </form>
                 </div>
