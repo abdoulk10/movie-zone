@@ -8,7 +8,6 @@ function HomePage() {
     const API_SEARCH="https://api.themoviedb.org/3/search/movie?api_key=ade9ac2663bdc8bc0eae7b07d7787d12&query="
     const [movies, setMovies] = useState([]);
     const [search, setSearch] = useState("");
-    const [term, setTerm] = useState("");
 
     useEffect(() =>{
         fetch(API_URL)
@@ -23,8 +22,6 @@ function HomePage() {
         fetch(API_SEARCH + search)
             .then(response => response.json())
             .then(data => setMovies(data.results));
-
-        setTerm("");
     }
 
 
@@ -36,7 +33,7 @@ return (
                 </div>
                 <div className="search_box">
                     <form onSubmit={handleSearch}>
-                        <input value={term} onChange={(e) => setTerm(e.target.value)}/>
+                        <input value={search} onChange={(e) => setSearch(e.target.value)}/>
                         <button>Search</button>
                     </form>
                 </div>
