@@ -3,56 +3,45 @@ import MovieCard from "./MovieCard";
 import "../styles/Homepage.css";
 import "../App.css";
 
-
 function HomePage() {
-    const [movieName, setmovieName] = useState("");
+    const API_URL="https://api.themoviedb.org/3/movie/popular?api_key=ade9ac2663bdc8bc0eae7b07d7787d12"
+    const API_SEARCH="https://api.themoviedb.org/3/search/movie?api_key=ade9ac2663bdc8bc0eae7b07d7787d12&query="
+
     const [movies, setMovies] = useState([]);
-    const searchMovies = async (e) => {
-        e.preventDefault();
-        try {
-            await fetch(
-                `${process.env.REACT_APP_API_HOST}/movies/${movieName}`
-            )
-                .then((response) => response.json())
-                .then((data) => {
-                    setMovies(data);
-                },);
-        } catch (error) {
-            setMovies([]);
-        }
-    };
-    useEffect(() => {
-        const getPopularMovies = async () => {
-            try {
-                await fetch(`${process.env.REACT_APP_API_HOST}/popular/`)
-                    .then((response) => response.json())
-                    .then((data) => {
-                        setMovies(data);
-                    });
-                } catch (error) {
-                    setMovies([]);
-                }
-            };
-            getPopularMovies();
-    }, []);
-    return (
+    const [search, setSearch] = useState("");
+
+    useEffect(() =>{
+        fetch(API_URL)
+            .then(response => response.json())
+            .then(data => setMovies(data.results))
+    },[])
+    console.log(movies)
+
+    const handleSearch = (e) => {
+        e.preventDefault()
+
+        fetch(API_SEARCH + search)
+            .then(response => response.json())
+            .then(data => setMovies(data.results))
+    }
+
+
+return (
         <div className="home-page">
-            <form className="form" onSubmit={searchMovies}>
-                <input
-                    className="input"
-                    type="text"
-                    name="query"
-                    placeholder="i.e. Star Wars"
-                    value={movieName}
-                    onChange={(e) => setmovieName(e.target.value)}
-                />
-                <button className="button" type="submit">
-                    Search
-                </button>
-            </form>
-            <div className="card-list">
+            <div className="search_nav">
+                <div className="title">
+                    <h1>Movies</h1>
+                </div>
+                <div className="search_box">
+                    <form onSubmit={handleSearch}>
+                        <input onChange={(e) => setSearch(e.target.value)}/>
+                        <button>Search</button>
+                    </form>
+                </div>
+            </div>
+            <div className="movies">
                 {movies?.map((movie) => (
-                    <MovieCard key={movie.id} movie={movie} />
+                    <MovieCard key={movie.id} movie={movie}/>
                 ))}
             </div>
         </div>

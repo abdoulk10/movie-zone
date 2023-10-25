@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routers import accounts
-import os
+from routers import accounts, bookmarks
 from authenticator import authenticator
 
 
@@ -9,7 +8,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["http://localhost:3001"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -17,6 +16,7 @@ app.add_middleware(
 
 app.include_router(accounts.router, tags=["Accounts"])
 app.include_router(authenticator.router, tags=["Accounts"])
+app.include_router(bookmarks.router, tags=["Bookmarks"])
 
 
 @app.get("/api/launch-details")

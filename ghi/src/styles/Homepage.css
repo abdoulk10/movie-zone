@@ -51,3 +51,30 @@ body {
 .movie {
   color: black;
 }
+
+.movies {
+    text-decoration: aliceblue;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.search_box input {
+    border: 0;
+    outline: 0;
+    margin-right: 0.1rem;
+    padding: 0.2rem;
+    border-radius: 1rem;
+ }
+
+ .search_box button {
+    border: 0;
+    outline: 0;
+    background-color: white;
+    padding: 0.2rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+ }
+ .search_box button:hover {
+    background-color: #2aac55;
+ }
