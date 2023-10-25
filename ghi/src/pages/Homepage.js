@@ -23,13 +23,9 @@ function HomePage() {
 
         fetch(API_SEARCH + term)
             .then(response => response.json())
-<<<<<<< HEAD
             .then(data => setMovies(data.results));
 
         setTerm("");
-=======
-            .then(data => setMovies(data.results))
->>>>>>> a1644934287da4a68673d8b75cb58c4cf31817c7
     }
 
 return (
@@ -40,11 +36,7 @@ return (
                 </div>
                 <div className="search_box">
                     <form onSubmit={handleSearch}>
-<<<<<<< HEAD
                         <input value={term} onChange={(e) => setTerm(e.target.value)}/>
-=======
-                        <input onChange={(e) => setTerm(e.target.value)}/>
->>>>>>> a1644934287da4a68673d8b75cb58c4cf31817c7
                         <button>Search</button>
                     </form>
                 </div>
