@@ -1,111 +1,84 @@
-import { NavLink } from "react-router-dom";
-import { useGetTokenQuery, useLogoutMutation } from "./app/apiSlice";
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-
+import { NavLink, Link } from "react-router-dom";
+import "./Navbar.css";
 
 function Nav() {
-    const { data: account } = useGetTokenQuery();
-    const [logout, logoutResponse] = useLogoutMutation();
-    const navigate = useNavigate();
-
-    useEffect(() => {
-        if (logoutResponse.data) {
-            navigate(`${"homepage"}`);
-        }
-    }, [logoutResponse]);
-
-    const handleRefresh = () => {
-        navigate(0);
-    };
-
     return (
-        <nav
-            className="navbar navbar-expand-lg bg-body-tertiary"
-            data-bs-theme="dark"
-        >
-        <div className="container-fluid navbar-nav me-auto mb-2 mb-lg-0">
-        <NavLink to={"homepage"} className="navbar-brand">
-        </NavLink>
-        <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target
-        >
+        <nav className="navbar navbar-expand-lg navbar-dark bg-success">
+            <div className="container-fluid">
+                <button
+                    className="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
             <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                {account && (
-                    <li className="nav-item">
-                        <NavLink to={"allwatchlist"} className={"nav-link"}>
-                        WatchList
-                        </NavLink>
-                    </li>
-                )}
-
-                {account && (
-                    <li className="nav-item">
-                        <NavLink
-                            to={"search"}
-                            className={"nav-link"}
-                            onSubmit={handleRefresh}
-                        >
-                        Search
-                        </NavLink>
-                    </li>
-                )}
-                {account && (
-                    <li className="nav-item">
-                        <NavLink to={"/spotify/allgenres"} className={"nav-link"}>
-                        Genres
-                        </NavLink>
-                    </li>
-                )}
-                {account && (
-                    <li className="nav-item">
-                        <NavLink to={"/spotify/recommendations"} className={"nav-link"}>
-                        Recommendations
-                        </NavLink>
-                    </li>
-                )}
-                {account && (
-                    <li className="nav-item">
-                        <NavLink to={"/spotify/random"} className={"nav-link"}>
-                        Random
-                        </NavLink>
-                    </li>
-                )}
-                {!account && (
-                    <li className="nav-item">
-                        <NavLink to={"LoginPage"} className={"nav-link"}>
-                        Login
-                        </NavLink>
-                    </li>
-                )}
-                {!account && (
-                    <li className="nav-item">
-                        <NavLink to={"SignupPage"} className={"nav-link"}>
-                        Sign Up
-                        </NavLink>
-                    </li>
-                )}
-            </ul>
-
-            {account && (
-                <button
-                    className="btn btn-danger"
-                    to="logoutPage"
-                    onClick={() => logout()}
-                >
-                Logout
-                </button>
-            )}
-                </div>
-            </div>
-        </nav>
-    );
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0 home-bookm">
+            <li className="nav-item">
+              <NavLink
+                className="nav-link active"
+                aria-current="page"
+                to="/homepage"
+              >
+                Homepage
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                className="nav-link active"
+                aria-current="page"
+                to="/Bookmarkedmovies"
+              >
+                Bookmarks
+              </NavLink>
+            </li>
+          </ul>
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li className="nav-item dropdown">
+              <div
+                className="nav-link dropdown-toggle account-dd"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Account
+              </div>
+              <ul
+                className="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li>
+                  <Link className="dropdown-item" to="/AccountDetails">
+                    Account Information
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/login">
+                    Sign In
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/signup">
+                    Sign Up
+                  </Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/logout">
+                    Sign Out
+                  </Link>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
 }
 
 export default Nav;
