@@ -10,6 +10,7 @@ import { AuthProvider, useToken } from "./pages/Authentication.js";
 import AccountDetailView from "./pages/Accountpage.js";
 import AccountEditForm from "./pages/Accounteditpage.js";
 import Bookmarkedmovies from "./pages/Bookmarked.js";
+import SearchComponent from "./pages/Search.js";
 import "./App.css";
 
 function GetToken() {
@@ -36,6 +37,7 @@ function App() {
             <Route path="/AccountDetails" element={<AccountDetailView />} />
             <Route path="/movies/:id/detail" element={<Moviedetail />} />
             <Route path="/AccountDetails/edit" element={<AccountEditForm />} />
+            <Route path="/search" element={<SearchComponent />} />
           </Routes>
         </div>
       </AuthProvider>
