@@ -29,3 +29,13 @@ Evan was able to alter some of the accounts content and added .env for the local
 So far, the application is looking successful. We can see and try out everything on Swagger UI and on docker.
 
 10/19/2023
+Worked on css
+
+10/20/2023
+worked on css
+
+10/23/2023
+Abdoul was able to fix the authentication and I continued working on the css files
+
+10/24/2023
+Tried to change Css files and incorporate bootstrap
