@@ -62,10 +62,6 @@ function Login() {
                 className="btn btn=primary"
                 onClick={() => navigate("/signup")}
                 >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
                     Submit
                 </button>
             </form>

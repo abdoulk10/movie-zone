@@ -1,6 +1,6 @@
 body {
     background-color: gray;
-    color: rgb(160, 14, 14);
+    color: rgb(237, 234, 234);
 }
 /* Align the header items to the right */
 .header {
@@ -14,7 +14,7 @@ body {
     font-weight: bold;
     margin-left: 20px;
     text-decoration: none;
-    color: #592035;
+    color: #f5f0f1;
 }
 /* Set the layout for the card list to a 4x4 grid */
 .card-list {
@@ -29,7 +29,7 @@ body {
 /* Apply a hover effect to the search button */
 .button:hover {
     background-color: #ffff;
-    color: #8c1414;
+    color: #f3eeee;
 }
 /* Apply a hover effect to the movie cards */
 .card:hover {
