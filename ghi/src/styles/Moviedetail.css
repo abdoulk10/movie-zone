@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   background-color: #ffc800;
   color: rgb(160, 14, 14);
@@ -196,3 +197,63 @@ svg {
   -webkit-text-stroke: .3px black;
 }
 
+=======
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;800&display=swap");
+
+
+.movie-detail {
+    padding: 25px;
+    height: 50%;
+    .text{
+        color: #545454;
+        width: 100%;
+}
+}
+
+.title {
+    text-transform: uppercase;
+	margin-bottom: 5px;
+}
+
+.reviews-container {
+  margin-top: 10px;
+}
+
+.review {
+  background-color: #2aac55;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  box-shadow: 0px 8px 0px 0px black;
+  border-radius: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.release_date {
+    margin-bottom: 10px;
+}
+
+.runtime {
+    margin-bottom: 10px;
+}
+
+.rating {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.details_overview {
+    background-color: #2aac55;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    box-shadow: 0px 8px 0px 0px black;
+    border-radius: 0.5rem;
+}
+
+.review_header {
+    font-size: 25px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+>>>>>>> a1644934287da4a68673d8b75cb58c4cf31817c7

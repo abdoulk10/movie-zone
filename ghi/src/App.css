@@ -5,6 +5,7 @@
   border: 0;
   box-sizing: border-box;
 }
+<<<<<<< HEAD
 :root {
   --font-roboto: "Roboto Slab", serif;
   --font-raleway: "Raleway", sans-serif;
@@ -15,6 +16,12 @@ body {
 }
 .app {
   padding: 4rem;
+=======
+
+.App-header {
+  background-color: #342828e3;
+  min-height: 100vh;
+>>>>>>> a1644934287da4a68673d8b75cb58c4cf31817c7
   display: flex;
   justify-content: center;
   align-items: center;
