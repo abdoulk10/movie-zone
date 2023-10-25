@@ -24,37 +24,24 @@ function Nav() {
                             </NavLink>
                         </li>
                         <li className="nav-item">
-<<<<<<< HEAD
-                            <NavLink
-                                className="nav-link active"
-                                aria-current="page"
-                                to="/TrendingMovies"
-                            >
-                                Trending Movies
-                            </NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink
-                                className="nav-link active"
-                                aria-current="page"
-                                to="/TopRatedMovies"
-                            >
-                                Top Rated
-                            </NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink
-                                className="nav-link active"
-                                aria-current="page"
-                                to="/LatestMovies"
-                            >
-                                Latest Movies
-                            </NavLink>
-=======
                           <NavLink className="nav-link active" aria-current="page" to="/Bookmarkedmovies">
                           Bookmarks
                           </NavLink>
->>>>>>> 9d932fd9746e76da53617cf9edecd6ab85768174
+                        </li>
+                        <li className="nav-item">
+                          <NavLink className="nav-link active" aria-current="page" to="/LatestMovies">
+                          Latest Movies
+                          </NavLink>
+                        </li>
+                        <li className="nav-item">
+                          <NavLink className="nav-link active" aria-current="page" to="/TrendingMovies">
+                          Trending
+                          </NavLink>
+                        </li>
+                        <li className="nav-item">
+                          <NavLink className="nav-link active" aria-current="page" to="/TopRatedMovies">
+                          Top Rated
+                          </NavLink>
                         </li>
                     </ul>
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
