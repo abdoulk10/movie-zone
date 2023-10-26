@@ -1,6 +1,19 @@
 import { useEffect, useState } from "react";
 import Construct from "./Construct.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/Homepage.js";
+import Mainpage from "./pages/Mainpage.js";
+import Nav from "./Nav.js";
+import Login from "./pages/Login.js";
+import Moviedetail from "./pages/Moviedetail.js";
+import Logout from "./pages/Logout.js";
+import Signup from "./pages/Signup.js";
+import { AuthProvider, useToken } from "./pages/Authentication.js";
+import AccountDetailView from "./pages/Accountpage.js";
+import AccountEditForm from "./pages/Accounteditpage.js";
+import TrendingMovies from "./pages/TrendingMovies.js";
+import TopRatedMovies from "./pages/TopRatedMovies.js";
+import LatestMovies from "./pages/LatestMovies.js";
 import "./App.css";
 import NavBar from "./Nav.js";
 import HomePage from "./HomePage.js";
@@ -13,50 +26,26 @@ import SearchPage from "./SearchPage.js";
 
 function App() {
   return (
-    <BrowserRouter>
-      <NavBar />
-      <div className="container">
-        <Routes>
-          <Route path="/">
-            <Route index element={<HomePage />} />
-          </Route>
-          <Route path="allwatchlist">
-            <Route index element={<AllWatchlist />} />
-          </Route>
-          <Route path="watchlist/:id/movies" element={<WatchlistPage />} />
-          <Route path="/tmdb/movies">
-            <Route index element={<MovieInfo />} />
-            <Route path=":id" element={<MovieInfo />} />
-          </Route>
-          <Route path="search">
-            <Route index element={<SearchPage />} />
-          </Route>
-          <Route path="homePage">
-            <Route index element={<HomePage />} />
-          </Route>
-          <Route path="loginPage">
-            <Route index element={<LoginPage />} />
-          </Route>
-          <Route path="signupPage">
-            <Route index element={<SignupPage />} />
-          </Route>
-          <Route path="signupPage/homePage" component={AllWatchlist}>
-            <Route index element={<AllWatchlist />} />
-          </Route>
-          <Route path="/loginPage/allwatchlist" component={AllWatchlist}>
-            <Route index element={<AllWatchlist />} />
-          </Route>
-          <Route path="/homePage/loginpage" component={LoginPage}>
-            <Route index element={<LoginPage />} />
-          </Route>
-          <Route
-            path="/homePage/loginpage/allwatchlist"
-            component={AllWatchlist}
-          >
-            <Route index element={<AllWatchlist />} />
-          </Route>
-        </Routes>
-      </div>
+    <BrowserRouter basename={basename}>
+      <AuthProvider>
+        <GetToken />
+        <Nav />
+        <div className="container">
+          <Routes>
+            <Route path="/LatestMovies" element={<LatestMovies />} />
+            <Route path="/TrendingMovies" element={<TrendingMovies />} />
+            <Route path="/TopRatedMovies" element={<TopRatedMovies />} />
+            <Route path="/" element={<Mainpage />} />
+            <Route path="/logout" element={<Logout />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/homepage" element={<HomePage />} />
+            <Route path="/AccountDetails" element={<AccountDetailView />} />
+            <Route path="/movies/:id/detail" element={<Moviedetail />} />
+            <Route path="/AccountDetails/edit" element={<AccountEditForm />} />
+          </Routes>
+        </div>
+      </AuthProvider>
     </BrowserRouter>
   );
 }
