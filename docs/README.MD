@@ -1,12 +1,18 @@
 ## Project Documentation
 
 1. `Functionality`: Articulate the capabilities of your app or service.
--Our FastAPI created with TMDB (the movie data base api) allows users to search and browse movies, display movie details, implements user registration and authentication to allow users to create accounts and manage their watchlists. The application also allows you to see trailer, ratings, and reviews. In the navigation bar a user can select Homepage, Popular movies, Trending movies, etc.
+-Our FastAPI created with TMDB (the movie data base api) allows users to search and browse movies,
+display movie details, implements user registration and authentication to allow users to create
+accounts and manage their watchlists.
+The application also allows you to see trailer, ratings, and reviews.
+In the navigation bar a user can select
+Homepage, Popular movies, Trending movies, etc.
 
 
 
 2. `User Stories/Scenarios`: Outline key use-cases, ideally using Gherkin syntax.
-Feature: Movie Database API Application
+
+- Feature: Movie Database API Application
 
   Scenario: Searching for Movies
     Given a user wants to search for movies
@@ -42,34 +48,36 @@ Feature: Movie Database API Application
 
 
 3. `Intended Market`: Clearly define your user persona and target demographic.
-User Persona:
 
-Name: Movie Enthusiast
-Age: 25-40
-Gender: Any
-Occupation: Various, including students, professionals, and movie industry workers.
-Location: Urban and suburban areas
-Interests:
-Passionate about movies and TV shows
-Enjoys both mainstream and indie films
-Enjoys discussing and sharing movie recommendations
-Keen on exploring movie details, cast, and trivia
-Often watches movies in theaters, on streaming platforms, or owns a substantial movie collection
-Tech-Savviness: Moderate to high
-Device Preferences: Primarily mobile devices (smartphones and tablets), but also desktop users
-Target Demographic:
+-User Persona:
 
-Age Range: 18-60+
-Gender: All genders
-Geographic Location: Primarily urban and suburban areas with access to cinemas and streaming services.
-Interests:
-People who love movies and TV shows across various genres.
-Moviegoers who frequently visit cinemas.
-Cord-cutters and subscribers to streaming services.
-Students looking for movie recommendations and film-related information.
-Professionals in the film industry who need a resource for movie data.
-Tech-Savviness: A broad range, from casual users to tech-savvy individuals.
-Device Preferences: Primarily mobile devices but with a responsive web version for desktop users.
+--Name: Movie Enthusiast
+--Age: 25-40
+--Gender: Any
+--Occupation: Various, including students, professionals, and movie industry workers.
+--Location: Urban and suburban areas
+--Interests:
+--Passionate about movies and TV shows
+--Enjoys both mainstream and indie films
+--Enjoys discussing and sharing movie recommendations
+--Keen on exploring movie details, cast, and trivia
+--Often watches movies in theaters, on streaming platforms, or owns a substantial movie collection
+--Tech-Savviness: Moderate to high
+--Device Preferences:  Desktop users
+
+-Target Demographic:
+
+--Age Range: 18-60+
+--Gender: All genders
+--Geographic Location: Primarily urban and suburban areas with access to cinemas and streaming services.
+--Interests:
+---People who love movies and TV shows across various genres.
+---Moviegoers who frequently visit cinemas.
+---Cord-cutters and subscribers to streaming services.
+---Students looking for movie recommendations and film-related information.
+---Professionals in the film industry who need a resource for movie data.
+---Tech-Savviness: A broad range, from casual users to tech-savvy individuals.
+---Device Preferences: Primarily mobile devices but with a responsive web version for desktop users.
 
 
 
