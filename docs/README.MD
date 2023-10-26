@@ -95,7 +95,7 @@ What you need to do to get started:
 -Install NPM packages
     npm install
 -Enter your API in config.js
-    const API_KEY = 'ENTER YOUR API";
+    const API_KEY = 'ENTER YOUR API KEY";
 
 
 

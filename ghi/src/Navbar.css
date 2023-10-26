@@ -60,3 +60,17 @@
     margin-right: 200px;
     padding: 10px;
 }
+
+.navbar-inverse .navbar-nav .open dropdown-item > li > a,
+.navbar-inverse .navbar-nav .open dropdown-item > li > a:visited {
+  color: white;
+}
+
+.a,
+nav-item {
+  color: white;
+}
+
+.navbar {
+  opacity: 0.7;
+}
