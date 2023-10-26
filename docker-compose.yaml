@@ -13,7 +13,7 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: secret
       ME_CONFIG_MONGODB_SERVER: mongo
     ports:
-      - "8083:8081"
+      - "8081:8081"
     depends_on:
       - mongo
     restart: always
@@ -37,7 +37,7 @@ services:
     volumes:
       - ./ghi:/app
     ports:
-      - "3001:3000"
+      - "3000:3000"
     environment:
       HOST_OS: ${OS}
       NODE_ENV: development

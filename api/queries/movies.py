@@ -1,31 +1,79 @@
+from pymongo import MongoClient
+from models import MovieIn
 import os
-import base64
-from requests import post, get
-import json
-import random
+from bson.objectid import ObjectId
+from bson.errors import InvalidId
+
+
+DATABASE_URL = os.environ.get("DATABASE_URL")
+client = MongoClient(DATABASE_URL)
+db = client["mongo-db"]
 
 client_id = os.environ.get("CLIENT_ID")
 client_secret = os.environ.get("CLIENT_SECRET")
 
 
-class MovieQueries:
+class MoviesQueries:
     @property
-    def get_token(self):
-        auth_string = f"{client_id}:{client_secret}"
-        auth_bytes = auth_string.encode("utf-8")
-        auth_base64 = str(base64.b64encode(auth_bytes), "utf-8")
+    def collection(self):
+        return db["movies-db"]
 
-        url = "https://accounts.spotify.com/api/token"
-        headers = {
-            "Authorization": "Basic " + auth_base64,
-            "Content-Type": "application/x-www-form-urlencoded",
-        }
+    def create(self, watchlist_id: str, movie_in: MovieIn, account_id: str):
+        movie = movie_in.dict()
+        movie["watchlist_id"] = watchlist_id
+        movie["account_id"] = account_id
+        movie["idx"] = 0
+        self.collection.insert_one(movie)
+        movie["id"] = str(movie["_id"])
+        return movie
 
-        data = {"grant_type": "client_credentials"}
-        result = post(url, headers=headers, data=data)
+    def find_all_movies(self):
+        results = []
+        for movie in self.collection.find():
+            movie["id"] = str(movie["_id"])
+            results.append(movie)
+        return results
 
-        json_result = json.loads(result.content)
+    def find_one_movie(self, movie_id: str):
+        try:
+            movie = self.collection.find_one({"_id": ObjectId(movie_id)})
 
-        token = json_result["access_token"]
+        except InvalidId:
+            return None
+        if movie is None:
+            return movie
 
-        return token
+        movie["id"] = str(movie["_id"])
+
+        return movie
+
+    def delete(self, movie_id: str, account_id: str, watchlist_id: str):
+        result = self.collection.delete_one(
+            {
+                "_id": ObjectId(movie_id),
+                "account_id": account_id,
+                "watchlist_id": watchlist_id,
+            }
+        )
+        return result.deleted_count > 0
+
+    def update(self, movie_id: str, movie_changes: MovieIn):
+        movie = movie_changes.dict()
+        try:
+            result = self.collection.update_one(
+                {"_id": ObjectId(movie_id)}, {"$set": movie}
+            )
+        except InvalidId:
+            return None
+        if result.matched_count == 0:
+            return None
+        movie["id"] = movie_id
+        return movie
+
+    def movies_in_watchlist(self, watchlist_id: str, account_id: str):
+        results = []
+        for movie in self.collection.find({"watchlist_id": watchlist_id}):
+            movie["id"] = str(movie["_id"])
+            movie["account_id"] = account_id
+            results.append(movie)
+        return {"movies": results}
