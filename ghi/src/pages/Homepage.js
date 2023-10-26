@@ -3,10 +3,8 @@ import { useNavigate } from "react-router-dom";
 import MovieCard from "./MovieCard";
 import "../styles/Homepage.css";
 import "../App.css";
-import { useAuthContext } from "./Authentication";
 
 function HomePage() {
-  const { token } = useAuthContext();
 
   const API_URL = "https://api.themoviedb.org/3/movie/popular?api_key=ade9ac2663bdc8bc0eae7b07d7787d12";
   const API_SEARCH = "https://api.themoviedb.org/3/search/movie?api_key=ade9ac2663bdc8bc0eae7b07d7787d12&query=";
@@ -17,14 +15,11 @@ function HomePage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!token) {
-      navigate("/login");
-    } else {
       fetch(API_URL)
         .then((response) => response.json())
         .then((data) => setMovies(data.results));
-    }
-  }, [token, API_URL, navigate]);
+  }, [API_URL, navigate]);
+  console.log(movies)
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -37,17 +32,15 @@ function HomePage() {
   return (
     <div className="home-page">
       <div className="search_nav">
-        <div className="title">
+        <div className="page-title">
           <h1>Movies</h1>
         </div>
-        {token ? (
           <div className="search_box">
             <form onSubmit={handleSearch}>
               <input onChange={(e) => setSearch(e.target.value)} />
               <button>Search</button>
             </form>
           </div>
-        ) : null}
       </div>
       <div className="movies">
         {movies?.map((movie) => (

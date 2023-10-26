@@ -6,12 +6,12 @@
 }
 
 .logo {
-  width: 200px; /* adjust to the size of your logo */
-  height: auto; /* adjust to the size of your logo */
+  width: 200px;
+  height: auto;
   position: absolute;
-  top: 20px; /* adjust to the desired distance from the top of the page */
-  left: 50%; /* center the logo horizontally */
-  transform: translateX(-50%); /* center the logo horizontally */
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 body {
@@ -22,11 +22,11 @@ body {
 }
 
 .mascot {
-  width: 100px; /* adjust the size of the mascot image */
-  height: auto; /* adjust the size of the mascot image */
+  width: 100px;
+  height: auto;
   position: absolute;
-  top: 100px; /* adjust the distance from the top of the page */
-  left: 50px; /* adjust the distance from the left of the page */
+  top: 100px;
+  left: 50px;
 }
 
 @keyframes tornado3D {
@@ -77,4 +77,14 @@ body {
  }
  .search_box button:hover {
     background-color: rgb(157, 18, 18);
+ }
+
+ .page-title {
+  position: center;
+  margin-bottom: 10px;
+  color: grey;
+ }
+
+ .search_box {
+  position: center;
  }

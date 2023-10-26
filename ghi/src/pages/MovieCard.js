@@ -5,7 +5,6 @@ function MovieCard(props) {
     const [showOverview] = useState(false);
     const imageUrl = `https://image.tmdb.org/t/p/w500/${props.movie.poster_path}`;
 
-
     return (
         <div className="movie">
             <div className="hero">

@@ -35,7 +35,7 @@ async def get_protected(
     return True
 
 
-@router.post("/signup", response_model=AccountToken)
+@router.post("/api/accounts", response_model=AccountToken)
 async def create_account(
     info: AccountIn,
     request: Request,

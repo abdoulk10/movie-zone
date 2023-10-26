@@ -196,7 +196,45 @@ svg {
   -webkit-text-stroke: .3px black;
 }
 
+.movie-detail {
+  color: white;
+}
+
 .video_header {
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+.video-iframe {
+  margin-top: 5px;
+}
+
+.review_header {
+  text-decoration: underline;
+  font-weight: bold;
+  background-color: rgb(160, 16, 16);
+}
+
+.reviews-container {
+  background-color: rgb(173, 14, 14);
+}
+
+.review {
+  background-color: #592035;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  box-shadow: 0px 8px 0px 0px black;
+  border-radius: 0.5rem;
+}
+
+.rating {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.details_overview {
+    font-size: 16px;
+    margin-bottom: 10px;
 }

@@ -46,7 +46,7 @@ function Signup() {
         if (response) {
             navigate("/homepage");
         } else {
-            navigate("/");
+            navigate("/homepage");
         }
     };
 

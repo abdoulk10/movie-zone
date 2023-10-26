@@ -14,7 +14,7 @@ function AccountDetailView() {
             return;
         } else {
             const fetchUserData = async () => {
-                const url = `${process.env.REACT_APP_API_HOST}}/users/get/${token.user.id}`;
+                const url = `${process.env.REACT_APP_MOVIES_SERVICE_API_HOST}/users/get/${token.user.id}`;
                 const response = await fetch(url, {
                     method: "GET",
                     headers: {
