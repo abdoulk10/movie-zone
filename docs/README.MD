@@ -1,7 +1,7 @@
 ## Project Documentation
 
 1. `Functionality`: Articulate the capabilities of your app or service.
-Our FastAPI created with TMDB (the movie data base api) allows users to search and browse movies, display movie details, implements user registration and authentication to allow users to create accounts and manage their watchlists. The applicaton also allows you to see trailer, ratings, and reviews. In the navigation bar a user can select Homepage, Popular movies, Trending movies, etc.
+-Our FastAPI created with TMDB (the movie data base api) allows users to search and browse movies, display movie details, implements user registration and authentication to allow users to create accounts and manage their watchlists. The application also allows you to see trailer, ratings, and reviews. In the navigation bar a user can select Homepage, Popular movies, Trending movies, etc.
 
 
 
@@ -71,28 +71,46 @@ Professionals in the film industry who need a resource for movie data.
 Tech-Savviness: A broad range, from casual users to tech-savvy individuals.
 Device Preferences: Primarily mobile devices but with a responsive web version for desktop users.
 
-4. `Stretch Goals`: Document “nice-to-haves” in your product roadmap. :rainbow:
+
+
+4. `Stretch Goals`: Document “nice-to-haves” in your product roadmap.
 - E.g.: Implement a recommendation engine via collaborative filtering.
 
 
 5. `Onboarding`: Detail the local dev setup, branching strategy, .env, 3rd party api keys, and CI/CD pipeline.
 - E.g.: Fork the repo, clone locally, install dependencies via `npm install`, and checkout to a feature branch.
 
+What you need to do to get started:
+-Get a free API key at https://themoviedb.org/
+-Clone the repo:
+    https://gitlab.com/abradshaw0728/movie-zone.git
+-Install NPM packages
+    npm install
+-Enter your API in config.js
+    const API_KEY = 'ENTER YOUR API";
+
+
 
 6. `Tech Stack`: Specify technologies, libraries, and frameworks.
-React, FastAPI, MongoDB, Docker, TMDB API
+-React
+-FastAPI
+-MongoDB
+-Docker
+-TMDB API
+-Bootstrap
+-Web-leb
 
 
 7. `Journaling`: Maintain a dev log, perhaps in a `CHANGELOG.md`.
+Developer journals are located in the Journals Folder.
 
-
-8. `Documentation`: Attach DB schemas, wireframes, and API contracts. 
+8. `Documentation`: Attach DB schemas, wireframes, and API contracts.
 -E.g.: point to the documents dir
 
 
-9. `Issue Tracking`: Link to your Linear or JIRA board for bug tracking. :ladybug:
+9. `Issue Tracking`: Link to your Linear or JIRA board for bug tracking.
 -E.g. - links or screenshoots, could be included in the doc’s dir
 
 
-10. `Testing`: Describe unit tests. :white_check_mark:
+10. `Testing`: Describe unit tests.
 -E.g. - <student name> : < location of test worked on>
