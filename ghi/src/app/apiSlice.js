@@ -55,14 +55,14 @@ export const moviezoneApi = createApi({
       }),
       invalidatesTags: ["movies"],
     }),
-    getAllMoviesInPlaylist: builder.query({
+    getAllMoviesInWatchlist: builder.query({
       query: (id) => ({
         url: `/api/watchlist/${id}/movies`,
         credentials: "include",
       }),
       providesTags: ["movies"],
     }),
-    createMoviesInPlaylist: builder.mutation({
+    createMoviesInWatchlist: builder.mutation({
       query: (data) => ({
         url: `/api/watchlist/${data.watchlist_id}/movies`,
         body: data,

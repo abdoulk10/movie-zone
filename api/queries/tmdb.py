@@ -14,7 +14,7 @@ class TmdbQueries:
         auth_bytes = auth_string.encode("utf-8")
         auth_base64 = str(base64.b64encode(auth_bytes), "utf-8")
 
-        url = "https://api.themoviedb.org/3/discover/movie?api_key=64a011e934b005082b8e61e383a1efe7"
+        url = "https://accounts.tmdb.com/api/token"
         headers = {
             "Authorization": "Basic " + auth_base64,
             "Content-Type": "application/x-www-form-urlencoded",
@@ -34,7 +34,7 @@ class TmdbQueries:
         return {"Authorization": "Bearer " + self.get_token}
 
     def search(self, s, o, lim):
-        url = "https://api.tmdb.com/v1/search"
+        url = "https://api.themoviedb.org/3/search"
         headers = self.get_auth_header
 
         q = f"?q={s}&type=artist,&offset={o}&limit={lim}"

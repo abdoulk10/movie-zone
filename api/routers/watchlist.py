@@ -12,7 +12,7 @@ from authenticator import authenticator
 router = APIRouter()
 
 
-@router.get("/api/watchlists", response_model=Watchlists)
+@router.get("/api/watchlist", response_model=Watchlists)
 def find_all(
     q: str | None = None,
     account_data: dict = Depends(authenticator.get_current_account_data),
@@ -21,7 +21,7 @@ def find_all(
     return {"watchlists": queries.find_all(account_id=account_data["id"])}
 
 
-@router.post("/api/watchlists", response_model=WatchlistOut)
+@router.post("/api/watchlist", response_model=WatchlistOut)
 def create_watchlist(
     watchlist_in: WatchlistIn,
     account_data: dict = Depends(authenticator.get_current_account_data),
@@ -32,7 +32,7 @@ def create_watchlist(
     )
 
 
-@router.get("/api/watchlists/{watchlist_id}", response_model=WatchlistOut)
+@router.get("/api/watchlist/{watchlist_id}", response_model=WatchlistOut)
 def get_watchlist(
     watchlist_id: str,
     account_data: dict = Depends(authenticator.get_current_account_data),
@@ -46,7 +46,7 @@ def get_watchlist(
     return watchlist
 
 
-@router.delete("/api/watchlists/{watchlist_id}", response_model=DeleteStatus)
+@router.delete("/api/watchlist/{watchlist_id}", response_model=DeleteStatus)
 def delete_watchlist(
     watchlist_id: str,
     account_data: dict = Depends(authenticator.get_current_account_data),
@@ -59,7 +59,7 @@ def delete_watchlist(
     }
 
 
-@router.put("/api/watchlists/{watchlist_id}", response_model=WatchlistOut)
+@router.put("/api/watchlist/{watchlist_id}", response_model=WatchlistOut)
 def update_watchlist(
     watchlist_id: str,
     watchlist_in: WatchlistIn,
