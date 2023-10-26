@@ -7,7 +7,7 @@ export const moviezoneApi = createApi({
   }),
   tagTypes: ["watchlist", "movies"],
   endpoints: (builder) => ({
-    getAllPlaylist: builder.query({
+    getAllWatchlist: builder.query({
       query: () => ({
         url: "/api/watchlist",
         credentials: "include",
@@ -23,7 +23,7 @@ export const moviezoneApi = createApi({
       }),
       invalidatesTags: ["watchlist"],
     }),
-    getSpecificPlaylist: builder.query({
+    getSpecificWatchlist: builder.query({
       query: (watchlist_id) => ({
         url: `/api/watchlist/${watchlist_id}`,
         credentials: "include",
@@ -100,13 +100,6 @@ export const moviezoneApi = createApi({
         method: "GET",
       }),
     }),
-    getTmdbRecommendations: builder.query({
-      query: (data) => ({
-        url: `/api/tmdb/recommendations/`,
-        params: data,
-        method: "GET",
-      }),
-    }),
     refetchOnMountOrArgChange: 30,
     endpoints: (builder) => ({
       getPosts: builder.query({
@@ -164,7 +157,7 @@ export const {
   useCreateWatchlistMutation,
   useGetSpecificWatchlistQuery,
   useDeleteWatchlistMutation,
-  useUpdateWathclistMutation,
+  useUpdateWatchlistMutation,
   useDeleteMovieMutation,
   useGetAllMoviesInWatchlistQuery,
   useCreateMovieInWatchlistMutation,
@@ -176,6 +169,6 @@ export const {
 
   useGetTmdbArtistQuery,
   useGetTmdbAlbumQuery,
-  useGetTmdbTrackQuery,
+  useGetTmdbMovieQuery,
   useLazyGetTmdbRecommendationsQuery,
 } = moviezoneApi;
