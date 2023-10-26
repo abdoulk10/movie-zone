@@ -1,23 +1,34 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import MovieCard from "./MovieCard";
 import "../styles/Homepage.css";
+import { useAuthContext } from "./Authentication";
 
 const TopRatedMovies = () => {
+  const { token } = useAuthContext();
+
   const TOP_RATED_URL = "https://api.themoviedb.org/3/movie/top_rated?api_key=ade9ac2663bdc8bc0eae7b07d7787d12";
   const API_SEARCH="https://api.themoviedb.org/3/search/movie?api_key=ade9ac2663bdc8bc0eae7b07d7787d12&query="
+
   const [topRatedMovies, setTopRatedMovies] = useState([]);
   const [search, setSearch] = useState("");
 
+  const navigate = useNavigate();
+
   useEffect(() => {
-    fetch(TOP_RATED_URL)
-      .then((response) => response.json())
-      .then((data) => {
-        setTopRatedMovies(data.results);
-      })
-      .catch((error) => {
-        console.error("Error fetching top-rated movies: ", error);
-      });
-  }, []);
+    if (!token) {
+        navigate("/login")
+    } else {
+        fetch(TOP_RATED_URL)
+            .then((response) => response.json())
+            .then((data) => {
+                setTopRatedMovies(data.results);
+            })
+            .catch((error) => {
+                console.error("Error fetching top-rated movies: ", error);
+        });
+    }
+  }, [token, TOP_RATED_URL, navigate]);
 
   const handleSearch = (e) => {
         e.preventDefault()

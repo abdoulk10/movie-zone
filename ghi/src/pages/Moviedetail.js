@@ -48,16 +48,22 @@ return (
     <div className="movie-detail">
       <h2 className="title">Title: {movie.title}</h2>
       <div className="videos-container">
-        <p className="video_header">Video Trailer: </p>
+        <p className="video_header">Video clips: </p>
         {videos.length > 0 ? (
-          <iframe
-            width="560"
-            height="315"
-            src={`https://www.youtube.com/embed/${videos[0].key}`}
-            title={videos[0].name}
-            allowFullScreen
-            frameBorder="0"
-          ></iframe>
+          <div>
+            {videos.slice(0, 2).map((video, index) => (
+              <iframe
+                key={video.id}
+                className="video-iframe"
+                width="560"
+                height="315"
+                src={`https://www.youtube.com/embed/${video.key}`}
+                title={video.name}
+                allowFullScreen
+                frameBorder="0"
+              ></iframe>
+            ))}
+          </div>
         ) : (
           <p className="no_videos">No videos available</p>
         )}

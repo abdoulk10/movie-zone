@@ -36,7 +36,7 @@ function App() {
             <Route path="/logout" element={<Logout />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/homepage" element={<HomePage />} />
+            <Route path="/homepage" element={<HomePage />}/>
             <Route path="/AccountDetails" element={<AccountDetailView />} />
             <Route path="/movies/:id/detail" element={<Moviedetail />} />
             <Route path="/AccountDetails/edit" element={<AccountEditForm />} />
