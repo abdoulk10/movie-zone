@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import Construct from "./Construct.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/Homepage.js";
 import Mainpage from "./pages/Mainpage.js";
@@ -15,13 +13,6 @@ import TrendingMovies from "./pages/TrendingMovies.js";
 import TopRatedMovies from "./pages/TopRatedMovies.js";
 import LatestMovies from "./pages/LatestMovies.js";
 import "./App.css";
-import NavBar from "./Nav.js";
-import LoginPage from "./LoginPage.js";
-import SignupPage from "./SignupPage.js";
-import AllWatchlist from "./pages/watchlist_functions/AllWatchlist.js";
-import WatchlistPage from "./WatchlistPage.js";
-import MovieInfo from "./MovieInfo.js";
-import SearchPage from "./SearchPage.js";
 
 function GetToken() {
   useToken();
