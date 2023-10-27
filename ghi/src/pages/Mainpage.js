@@ -6,7 +6,7 @@ function Mainpage() {
     return (
         <div className="px-4 py-5 my-5 text-center">
             <div className="text-center">
-                <h1 className="display-5 fw-bold">Movie Zone</h1>
+                <h1 className="display-5 fw-bold">MOVIE ZONE</h1>
             </div>
             <div className="d-grid gap-4 mx-auto">
                 <button

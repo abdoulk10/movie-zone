@@ -3,8 +3,7 @@ import MovieCard from "./MovieCard";
 import "../styles/Homepage.css";
 
 const LatestMovies = () => {
-  const UPCOMING_URL =
-    "https://api.themoviedb.org/3/movie/upcoming?api_key=ade9ac2663bdc8bc0eae7b07d7787d12";
+  const UPCOMING_URL = "https://api.themoviedb.org/3/movie/upcoming?api_key=ade9ac2663bdc8bc0eae7b07d7787d12";
   const [upcomingMovies, setUpcomingMovies] = useState([]);
 
   useEffect(() => {

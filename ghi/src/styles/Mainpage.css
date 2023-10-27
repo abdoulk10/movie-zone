@@ -1,3 +1,4 @@
+
 .btn-color {
     background-color: black; /* change this to your desired color */
     color: #ffff
@@ -19,10 +20,11 @@
 }
 
 .text-end{
-    font-size: 18px;
-    padding-left: 50px
+  font-size: 18px;
+
+  padding-left: 50px
 }
 .text-center{
-    color: #fff;
-    -webkit-text-stroke: 1.5px #0000;
+  color: #fff;
+  -webkit-text-stroke: 1.5px #0000;
 }

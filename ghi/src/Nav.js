@@ -1,5 +1,8 @@
-import { NavLink, Link } from "react-router-dom";
-import "./Navbar.css";
+import { NavLink } from "react-router-dom";
+import { useGetTokenQuery, useLogoutMutation } from "./app/apiSlice";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import Meme from "./logo-image/Meme.png";
 
 function Nav() {
     return (
@@ -60,13 +63,14 @@ function Nav() {
                             <Link className="dropdown-item" to="/logout">Sign Out</Link>
                           </li>
                       </ul>
-                      
+
                     </li>
                   </ul>
               </div>
           </div>
       </nav>
     );
+>>>>>>> origin/main
 }
 
-export default Nav;
+export default NavBar;

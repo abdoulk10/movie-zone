@@ -3,10 +3,8 @@ import MovieCard from "./MovieCard";
 import "../styles/Homepage.css";
 
 const TopRatedMovies = () => {
-  const TOP_RATED_URL =
-    "https://api.themoviedb.org/3/movie/top_rated?api_key=ade9ac2663bdc8bc0eae7b07d7787d12";
-  const API_SEARCH =
-    "https://api.themoviedb.org/3/search/movie?api_key=ade9ac2663bdc8bc0eae7b07d7787d12&query=";
+  const TOP_RATED_URL = "https://api.themoviedb.org/3/movie/top_rated?api_key=ade9ac2663bdc8bc0eae7b07d7787d12";
+  const API_SEARCH="https://api.themoviedb.org/3/search/movie?api_key=ade9ac2663bdc8bc0eae7b07d7787d12&query="
   const [topRatedMovies, setTopRatedMovies] = useState([]);
   const [search, setSearch] = useState("");
 

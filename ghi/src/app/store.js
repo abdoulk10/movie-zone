@@ -1,5 +1,4 @@
 import { configureStore } from "@reduxjs/toolkit";
-
 import { moviezoneApi } from "./apiSlice";
 import searchReducer from "./searchSlice";
 import { setupListeners } from "@reduxjs/toolkit/dist/query";

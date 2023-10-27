@@ -38,7 +38,7 @@ search_box {
 }
 
 .card-list > div {
-    animation: tornado3D 0.35s;
+  animation: tornado3D 0.35s;
 }
 
 .movie {
@@ -51,7 +51,6 @@ search_box {
     flex-wrap: wrap;
 
 }
-
 
 .search_box input {
     border: 0;

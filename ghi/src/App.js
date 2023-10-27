@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import Construct from "./Construct.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/Homepage.js";
 import Mainpage from "./pages/Mainpage.js";
@@ -13,13 +15,14 @@ import TrendingMovies from "./pages/TrendingMovies.js";
 import TopRatedMovies from "./pages/TopRatedMovies.js";
 import LatestMovies from "./pages/LatestMovies.js";
 import "./App.css";
-
-function GetToken() {
-  useToken();
-  return null;
-}
-const domain = /https:\/\/[^/]+/;
-const basename = process.env.PUBLIC_URL.replace(domain, "");
+import NavBar from "./Nav.js";
+import HomePage from "./HomePage.js";
+import LoginPage from "./LoginPage.js";
+import SignupPage from "./SignupPage.js";
+import AllWatchlist from "./AllWatchlist.js";
+import WatchlistPage from "./WatchlistPage.js";
+import MovieInfo from "./MovieInfo.js";
+import SearchPage from "./SearchPage.js";
 
 function App() {
   return (
