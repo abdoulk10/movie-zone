@@ -1,11 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-<<<<<<< HEAD
-from routers import accounts, watchlist, movies, tmdb
-import os
-=======
-from routers import accounts, bookmarks
->>>>>>> origin/main
+from routers import accounts
 from authenticator import authenticator
 
 
@@ -21,7 +16,6 @@ app.add_middleware(
 
 app.include_router(accounts.router, tags=["Accounts"])
 app.include_router(authenticator.router, tags=["Accounts"])
-app.include_router(bookmarks.router, tags=["Bookmarks"])
 
 
 @app.get("/api/launch-details")
@@ -36,7 +30,3 @@ def launch_details():
         }
     }
 
-
-app.include_router(watchlist.router, tags=["Watchlist"])
-app.include_router(movies.router, tags=["Movies"])
-app.include_router(tmdb.router, tags=["Tmdb"])

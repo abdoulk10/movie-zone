@@ -1,4 +1,4 @@
-import { useGetAllWatchlistQuery } from "./app/apiSlice";
+import { useGetAllWatchlistQuery } from "../../app/apiSlice";
 import DeleteWatchlistButton from "./watchlist_functions/WatchlistFunctions";
 import AllMoviesInWatchlist from "./MoviesInWatchlist";
 import UpdateButton from "./watchlist_functions/UpdateWatchlist";
@@ -33,7 +33,7 @@ function AllWatchlist() {
               <tr key={watchlist.id}>
                 <td>
                   <Link
-                  className="link-primary text-decoration-none"
+                    className="link-primary text-decoration-none"
                     to={`/watchlist/${watchlist.id}/movies`}
                     state={{ data: { watchlist } }}
                   >

@@ -2,7 +2,6 @@
     text-emphasis-color: White;
     text-align: left;
     border-left-width: 0cqh;
-    background: url(https://img.freepik.com/free-photo/crop-clapperboard-near-tickets-popcorn_23-2147698940.jpg?w=826&t=st=1698240471~exp=1698241071~hmac=9908bd6344982c5ed054b89725bc4656e201702747d9baeb1fe3a3d803e98ead);
 }
 
 .home-bm {
@@ -15,9 +14,9 @@
     display: flex; /* Display elements in a row (horizontal) */
     justify-content: space-between; /* Space items evenly */
     align-items: center;
-    margin-right: 20px;
+    margin-right: 0px;
+    background: url(https://img.freepik.com/free-photo/crop-clapperboard-near-tickets-popcorn_23-2147698940.jpg?w=826&t=st=1698240471~exp=1698241071~hmac=9908bd6344982c5ed054b89725bc4656e201702747d9baeb1fe3a3d803e98ead);
 }
-
 
 .nav-link {
     font-family: sans-serif;
@@ -74,3 +73,5 @@ nav-item {
 .navbar {
   opacity: 0.7;
 }
+
+

@@ -62,7 +62,10 @@ class WatchlistQueries:
         return result.deleted_count > 0
 
     def update(
-        self, watchlist_id: str, watchlist_changes: WatchlistIn, account_id: str
+        self,
+        watchlist_id: str,
+        watchlist_changes: WatchlistIn,
+        account_id: str,
     ):
         watchlist = watchlist_changes.dict()
         try:

@@ -18,10 +18,17 @@ import "./App.css";
 import NavBar from "./Nav.js";
 import LoginPage from "./LoginPage.js";
 import SignupPage from "./SignupPage.js";
-import AllWatchlist from "./AllWatchlist.js";
+import AllWatchlist from "./pages/watchlist_functions/AllWatchlist.js";
 import WatchlistPage from "./WatchlistPage.js";
 import MovieInfo from "./MovieInfo.js";
 import SearchPage from "./SearchPage.js";
+
+function GetToken() {
+  useToken();
+  return null;
+}
+const domain = /https:\/\/[^/]+/;
+const basename = process.env.PUBLIC_URL.replace(domain, "");
 
 function App() {
   return (

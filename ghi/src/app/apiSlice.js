@@ -7,7 +7,7 @@ export const moviezoneApi = createApi({
   }),
   tagTypes: ["watchlist", "movies"],
   endpoints: (builder) => ({
-    getAllWatchlist: builder.query({
+    getAllPlaylist: builder.query({
       query: () => ({
         url: "/api/watchlist",
         credentials: "include",
@@ -23,7 +23,7 @@ export const moviezoneApi = createApi({
       }),
       invalidatesTags: ["watchlist"],
     }),
-    getSpecificWatchlist: builder.query({
+    getSpecificPlaylist: builder.query({
       query: (watchlist_id) => ({
         url: `/api/watchlist/${watchlist_id}`,
         credentials: "include",
@@ -55,14 +55,14 @@ export const moviezoneApi = createApi({
       }),
       invalidatesTags: ["movies"],
     }),
-    getAllMoviesInWatchlist: builder.query({
+    getAllMoviesInPlaylist: builder.query({
       query: (id) => ({
         url: `/api/watchlist/${id}/movies`,
         credentials: "include",
       }),
       providesTags: ["movies"],
     }),
-    createMoviesInWatchlist: builder.mutation({
+    createMoviesInPlaylist: builder.mutation({
       query: (data) => ({
         url: `/api/watchlist/${data.watchlist_id}/movies`,
         body: data,
@@ -97,6 +97,13 @@ export const moviezoneApi = createApi({
     getTmdbMovie: builder.query({
       query: (data) => ({
         url: `/api/tmdb/movie/${data}`,
+        method: "GET",
+      }),
+    }),
+    getTmdbRecommendations: builder.query({
+      query: (data) => ({
+        url: `/api/tmdb/recommendations/`,
+        params: data,
         method: "GET",
       }),
     }),
@@ -157,7 +164,7 @@ export const {
   useCreateWatchlistMutation,
   useGetSpecificWatchlistQuery,
   useDeleteWatchlistMutation,
-  useUpdateWatchlistMutation,
+  useUpdateWathclistMutation,
   useDeleteMovieMutation,
   useGetAllMoviesInWatchlistQuery,
   useCreateMovieInWatchlistMutation,
@@ -169,6 +176,6 @@ export const {
 
   useGetTmdbArtistQuery,
   useGetTmdbAlbumQuery,
-  useGetTmdbMovieQuery,
+  useGetTmdbTrackQuery,
   useLazyGetTmdbRecommendationsQuery,
 } = moviezoneApi;
