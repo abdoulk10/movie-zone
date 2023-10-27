@@ -70,7 +70,6 @@ function Nav() {
           </div>
       </nav>
     );
->>>>>>> origin/main
 }
 
 export default NavBar;

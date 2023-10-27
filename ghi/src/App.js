@@ -16,7 +16,6 @@ import TopRatedMovies from "./pages/TopRatedMovies.js";
 import LatestMovies from "./pages/LatestMovies.js";
 import "./App.css";
 import NavBar from "./Nav.js";
-import HomePage from "./HomePage.js";
 import LoginPage from "./LoginPage.js";
 import SignupPage from "./SignupPage.js";
 import AllWatchlist from "./AllWatchlist.js";
