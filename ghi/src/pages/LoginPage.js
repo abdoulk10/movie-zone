@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { useLoginMutation } from "./app/apiSlice";
+import { useLoginMutation } from "../app/apiSlice";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import "../styles/Login.css";
 
 function LoginPage() {
   const [login, loginResponse] = useLoginMutation();

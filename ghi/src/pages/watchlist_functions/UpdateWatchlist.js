@@ -1,4 +1,4 @@
-import { useUpdateWatchlistMutation } from "../app/apiSlice";
+import { useUpdateWatchlistMutation } from "../../app/apiSlice";
 
 import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";

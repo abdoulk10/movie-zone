@@ -1,5 +1,5 @@
 import Meme from "./logo-image/Meme.png";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import MovieCard from "./MovieCard";
 import "../styles/Homepage.css";

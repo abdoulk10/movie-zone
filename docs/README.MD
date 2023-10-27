@@ -117,7 +117,7 @@ Developer journals are located in the Journals Folder.
 
 
 9. `Issue Tracking`: Link to your Linear or JIRA board for bug tracking.
--E.g. - links or screenshoots, could be included in the doc’s dir
+-E.g. - links or screenshots, could be included in the doc’s dir
 
 
 10. `Testing`: Describe unit tests.
