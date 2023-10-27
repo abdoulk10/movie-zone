@@ -197,7 +197,7 @@ svg {
 }
 
 .movie-detail {
-  color: white;
+  color: black;
 }
 
 .video_header {
@@ -212,18 +212,15 @@ svg {
 .review_header {
   text-decoration: underline;
   font-weight: bold;
-  background-color: rgb(160, 16, 16);
 }
 
-.reviews-container {
-  background-color: rgb(173, 14, 14);
-}
+
 
 .review {
-  background-color: #592035;
+  background-color: rgb(168, 168, 168);
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid black;
+  border: 1px solid rgb(188, 187, 187);
   box-shadow: 0px 8px 0px 0px black;
   border-radius: 0.5rem;
 }

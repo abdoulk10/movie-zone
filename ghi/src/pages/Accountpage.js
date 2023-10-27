@@ -4,7 +4,7 @@ import { useAuthContext } from "./Authentication";
 import "../styles/Accountpage.css";
 
 function AccountDetailView() {
-    const { user, token } = useAuthContext();
+    const { accoumt, token } = useAuthContext();
     const [userData, setUserData] = useState({});
     const navigate = useNavigate();
 
@@ -14,7 +14,7 @@ function AccountDetailView() {
             return;
         } else {
             const fetchUserData = async () => {
-                const url = `${process.env.REACT_APP_MOVIES_SERVICE_API_HOST}/users/get/${token.user.id}`;
+                const url = `${process.env.REACT_APP_MOVIES_SERVICE_API_HOST}/users/get/${token.account.id}`;
                 const response = await fetch(url, {
                     method: "GET",
                     headers: {
@@ -28,7 +28,9 @@ function AccountDetailView() {
             };
             fetchUserData();
         }
-    }, [user, token, navigate]);
+    }, [accoumt, token, navigate]);
+    console.log(token)
+    console.log(userData)
     return (
         <div>
             <h2 className="account-detail">Account Details</h2>
