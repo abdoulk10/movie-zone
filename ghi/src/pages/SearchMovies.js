@@ -2,11 +2,11 @@ import { useSelector } from "react-redux";
 import {
   useLazySearchTmdbQuery,
   useGetAllWatchlistQuery,
-} from "./app/apiSlice";
+} from "../app/apiSlice";
 import { Link } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
 import React, { useState, useEffect } from "react";
-import CreateMovieButton from "./watchlist_functions/CreateMovie";
+import CreateMovieButton from "../watchlist_functions/CreateMovie";
 
 function SearchMovies() {
   const sTmdb = useSelector((state) => state.search.value);

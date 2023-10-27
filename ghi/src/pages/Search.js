@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-import { search } from "./app/searchSlice";
+import { search } from "../app/searchSlice";
 
 
 

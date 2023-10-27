@@ -1,11 +1,11 @@
 import {
   useGetAllMoviesInWatchlistQuery,
   useGetSpecificWatchlistQuery,
-} from "./app/apiSlice";
-import DeleteMovieButton from "./watchlist_functions/DeleteMovie.js";
+} from "../app/apiSlice";
+import DeleteMovieButton from "../watchlist_functions/DeleteMovie.js";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
-import UpdateButton from "./watchlist_functions/UpdateWatchlist.js";
+import UpdateButton from "../watchlist_functions/UpdateWatchlist.js";
 import { useParams } from "react-router-dom";
 
 function SpecificWatchlist() {
