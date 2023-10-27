@@ -1,13 +1,10 @@
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-import { search } from "./app/searchSlice";
-
-
+import { search } from "../app/searchSlice";
 
 function Search() {
   const [searchInput, setSearchInput] = useState("");
   const dispatch = useDispatch();
-
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();

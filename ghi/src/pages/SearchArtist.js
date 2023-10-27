@@ -1,8 +1,8 @@
 import { useSelector, useDispatch } from "react-redux";
-import { useLazySearchTmdbQuery } from "./app/apiSlice";
+import { useLazySearchTmdbQuery } from "../app/apiSlice";
 import { Link } from "react-router-dom";
 import React, { useEffect } from "react";
-import { search, reset } from "./app/searchSlice";
+import { search, reset } from "../app/searchSlice";
 
 function SearchArtist() {
   const sTmdb = useSelector((state) => state.search.value);
