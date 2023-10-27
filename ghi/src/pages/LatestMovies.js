@@ -19,11 +19,11 @@ const LatestMovies = () => {
 
   return (
     <div className="home-page">
-        <div className="search_nav">
-            <div className="title">
-                <h1>Latest Movies</h1>
-            </div>
+      <div className="search_nav">
+        <div className="title">
+          <h1>Latest Movies</h1>
         </div>
+      </div>
       <div className="movies">
         {upcomingMovies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />

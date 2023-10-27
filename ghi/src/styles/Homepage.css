@@ -1,17 +1,14 @@
 .home-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+    background-image: url(https://img.freepik.com/free-photo/crop-clapperboard-near-tickets-popcorn_23-2147698940.jpg?w=826&t=st=1698240471~exp=1698241071~hmac=9908bd6344982c5ed054b89725bc4656e201702747d9baeb1fe3a3d803e98ead);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.logo {
-  width: 200px; /* adjust to the size of your logo */
-  height: auto; /* adjust to the size of your logo */
-  position: absolute;
-  top: 20px; /* adjust to the desired distance from the top of the page */
-  left: 50%; /* center the logo horizontally */
-  transform: translateX(-50%); /* center the logo horizontally */
+h1 {
+    text-align: center;
+    animation: tornado3D 0.35s;
 }
 
 body {
@@ -21,23 +18,19 @@ body {
     opacity: 0.9;
 }
 
-.mascot {
-  width: 100px; /* adjust the size of the mascot image */
-  height: auto; /* adjust the size of the mascot image */
-  position: absolute;
-  top: 100px; /* adjust the distance from the top of the page */
-  left: 50px; /* adjust the distance from the left of the page */
+search_box {
+    flex-wrap: wrap;
 }
 
 @keyframes tornado3D {
-  from {
-    transform: translateZ(-500px) rotateY(-85deg);
-    opacity: 0;
-  }
-  to {
-    transform: translateZ(0) rotateY(0deg);
-    opacity: 1;
-  }
+    from {
+        transform: translateZ(-500px) rotateY(-85deg);
+        opacity: 0;
+     }
+    to {
+        transform: translateZ(0) rotateY(0deg);
+        opacity: 1;
+    }
 }
 
 .card-list {
@@ -49,11 +42,11 @@ body {
 }
 
 .movie {
-  color: black;
+    color: black;
 }
 
 .movies {
-    text-decoration: aliceblue;
+    text-decoration: rgb(21, 90, 150);
     display: flex;
     flex-wrap: wrap;
 
@@ -76,5 +69,5 @@ body {
     margin-bottom: 1rem;
  }
  .search_box button:hover {
-    background-color: #2aac55;
+    background-color: white;
  }

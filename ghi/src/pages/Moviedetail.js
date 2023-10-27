@@ -20,23 +20,23 @@ function MovieDetail() {
 
   const [reviews, setReviews] = useState([]);
 
-
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=ade9ac2663bdc8bc0eae7b07d7787d12`)
+    fetch(
+      `https://api.themoviedb.org/3/movie/${id}?api_key=ade9ac2663bdc8bc0eae7b07d7787d12`
+    )
       .then((response) => response.json())
       .then((data) => setMovie(data))
       .catch((error) => console.error("Error fetching movie details: ", error));
   }, [id]);
 
-
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/${id}/reviews?api_key=ade9ac2663bdc8bc0eae7b07d7787d12`)
+    fetch(
+      `https://api.themoviedb.org/3/movie/${id}/reviews?api_key=ade9ac2663bdc8bc0eae7b07d7787d12`
+    )
       .then((response) => response.json())
       .then((data) => setReviews(data.results))
       .catch((error) => console.error("Error fetching reviews: ", error));
   }, [id]);
-
-
 
   const firstReviews = reviews.slice(0, 8);
 
@@ -63,7 +63,6 @@ function MovieDetail() {
       </div>
     </div>
   );
-
 }
 
 export default MovieDetail;

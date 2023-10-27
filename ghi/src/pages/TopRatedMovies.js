@@ -20,26 +20,26 @@ const TopRatedMovies = () => {
   }, []);
 
   const handleSearch = (e) => {
-        e.preventDefault()
+    e.preventDefault();
 
-        fetch(API_SEARCH + search)
-            .then(response => response.json())
-            .then(data => setTopRatedMovies(data.results))
-    }
+    fetch(API_SEARCH + search)
+      .then((response) => response.json())
+      .then((data) => setTopRatedMovies(data.results));
+  };
 
   return (
     <div className="home-page">
-        <div className="search_nav">
-            <div className="title">
-                <h1>Top Rated Movies</h1>
-            </div>
+      <div className="search_nav">
+        <div className="title">
+          <h1>Top Rated Movies</h1>
+        </div>
         <div className="search_box">
-            <form onSubmit={handleSearch}>
-                <input onChange={(e) => setSearch(e.target.value)}/>
-                <button>Search</button>
-            </form>
+          <form onSubmit={handleSearch}>
+            <input onChange={(e) => setSearch(e.target.value)} />
+            <button>Search</button>
+          </form>
         </div>
-        </div>
+      </div>
       <div className="movies">
         {topRatedMovies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />

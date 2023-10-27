@@ -1,7 +1,6 @@
 body {
-  background-color: #ffc800;
-  color: rgb(160, 14, 14);
-
+    background-color: gray;
+    color: rgb(237, 234, 234);
 }
 /* Align the header items to the right */
 .header {
@@ -11,22 +10,26 @@ body {
 }
 /* Style the header links */
 .header a {
-  font-size: 18px;
-  font-weight: bold;
-  margin-left: 20px;
-  text-decoration: none;
-  color: #592035;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 20px;
+    text-decoration: none;
+    color: #f5f0f1;
 }
 /* Set the layout for the card list to a 4x4 grid */
 .card-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 /* Apply a hover effect to the search button */
 .button:hover {
-  background-color: #ffff;
-  color: #8c1414;
+    background-color: #ffff;
+    color: #f3eeee;
 }
 /* Apply a hover effect to the movie cards */
 .card:hover {
@@ -91,7 +94,7 @@ body {
   padding: 10px;
   border-radius: 5px;
   border: none;
-  background-color: #8c1414;
+  background-color: #060606;
   color: #ffff;
   width: 200px; /* increase width */
   cursor: pointer;
@@ -107,7 +110,7 @@ body {
 }
 
 a:hover path {
-  fill: #df8817;
+  fill: #f9f8f6;
 }
 
 svg {
