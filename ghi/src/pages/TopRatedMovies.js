@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import MovieCard from "./MovieCard";
 import "../styles/Homepage.css";
 
 const TopRatedMovies = () => {
-  const TOP_RATED_URL = "https://api.themoviedb.org/3/movie/top_rated?api_key=ade9ac2663bdc8bc0eae7b07d7787d12";
-  const API_SEARCH="https://api.themoviedb.org/3/search/movie?api_key=ade9ac2663bdc8bc0eae7b07d7787d12&query="
+  const TOP_RATED_URL =
+    "https://api.themoviedb.org/3/movie/top_rated?api_key=ade9ac2663bdc8bc0eae7b07d7787d12";
+
   const [topRatedMovies, setTopRatedMovies] = useState([]);
-  const [search, setSearch] = useState("");
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch(TOP_RATED_URL)
@@ -17,29 +20,15 @@ const TopRatedMovies = () => {
       .catch((error) => {
         console.error("Error fetching top-rated movies: ", error);
       });
-  }, []);
-
-  const handleSearch = (e) => {
-        e.preventDefault()
-
-        fetch(API_SEARCH + search)
-            .then(response => response.json())
-            .then(data => setTopRatedMovies(data.results))
-    }
+  }, [TOP_RATED_URL, navigate]);
 
   return (
     <div className="home-page">
-        <div className="search_nav">
-            <div className="title">
-                <h1>Top Rated Movies</h1>
-            </div>
-        <div className="search_box">
-            <form onSubmit={handleSearch}>
-                <input onChange={(e) => setSearch(e.target.value)}/>
-                <button>Search</button>
-            </form>
+      <div className="search_nav">
+        <div className="page-title">
+          <h1>Top Rated Movies</h1>
         </div>
-        </div>
+      </div>
       <div className="movies">
         {topRatedMovies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />

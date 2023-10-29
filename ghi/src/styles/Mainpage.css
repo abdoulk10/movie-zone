@@ -1,22 +1,22 @@
 
 .btn-color {
-  background-color: #8c1414; /* change this to your desired color */
-  color: #ffff
+    background-color: black; /* change this to your desired color */
+    color: #ffff
 }
 
 .btn-hover:hover {
-  background-color: #ffff; /* change this to your desired hover color */
-  color: #8c1414; /* change this to your desired text color */
+    background-color: black; /* change this to your desired hover color */
+    color: white; /* change this to your desired text color */
 }
 
 .btn-color2 {
-  background-color: #ffff; /* change this to your desired color */
-  color: #8c1414
+    background-color: #ffff; /* change this to your desired color */
+    color: black;
 }
 
 .btn-hover2:hover {
-  background-color: #8c1414; /* change this to your desired color */
-  color:  #ffff/* change this to your desired text color */
+    background-color: black; /* change this to your desired color */
+    color:  #ffff/* change this to your desired text color */
 }
 
 .text-end{

@@ -39,7 +39,7 @@
 
 .overview {
     font: italic;
-    color: black;
+    color: White;
     transform: translateY(100%);
     position: absolute;
     top: 0;
@@ -57,7 +57,7 @@
 .overview_info {
     max-width: 20rem;
     text-align: center;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .movie:hover .overview {

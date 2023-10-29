@@ -29,3 +29,4 @@ class MovieQueries:
         token = json_result["access_token"]
 
         return token
+

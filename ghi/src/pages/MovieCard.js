@@ -1,10 +1,11 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Moviecard.css";
+
+
 function MovieCard(props) {
     const [showOverview] = useState(false);
     const imageUrl = `https://image.tmdb.org/t/p/w500/${props.movie.poster_path}`;
-
 
     return (
         <div className="movie">
@@ -29,3 +30,7 @@ function MovieCard(props) {
 }
 
 export default MovieCard;
+
+
+
+

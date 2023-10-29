@@ -1,21 +1,71 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;800&display=swap");
-
-
-.movie-detail {
-    padding: 25px;
-    height: 50%;
-    .text{
-        color: #545454;
-        width: 100%;
-}
+body {
+    background-color: gray;
+    color: rgb(237, 234, 234);
 }
 
-.title {
-    text-transform: uppercase;
-	margin-bottom: 5px;
+/* Style the header links */
+.header a {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 20px;
+    text-decoration: none;
+    color: #f5f0f1;
 }
-
-.reviews-container {
+/* Set the layout for the card list to a 4x4 grid */
+.card-list {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Apply a hover effect to the search button */
+.button:hover {
+    background-color: #ffff;
+    color: #f3eeee;
+}
+/* Apply a hover effect to the movie cards */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+/* Style the movie card */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.card-content {
+  padding: 20px;
+}
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.card-text {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.card-year {
+  font-size: 14px;
+  font-style: italic;
+  margin: 0;
+}
+.card-rating {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
   margin-top: 10px;
 }
 
@@ -23,14 +73,31 @@
   background-color: #2aac55;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid black;
-  box-shadow: 0px 8px 0px 0px black;
-  border-radius: 0.5rem;
-  flex-wrap: wrap;
+  width: 400px; /* increase width */
+}
+.button {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #060606;
+  color: #ffff;
+  width: 200px; /* increase width */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+/* Arrange header items side by side */
+.header div {
+  display: flex;
+}
+/* Add margin to header links */
+.header a:not(:first-child) {
+  margin-left: 30px;
 }
 
-.release_date {
-    margin-bottom: 10px;
+a:hover path {
+  fill: #f9f8f6;
 }
 
 .runtime {

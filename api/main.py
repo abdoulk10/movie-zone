@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routers import accounts, bookmarks
+from routers import accounts
 from authenticator import authenticator
 
 
@@ -16,7 +16,6 @@ app.add_middleware(
 
 app.include_router(accounts.router, tags=["Accounts"])
 app.include_router(authenticator.router, tags=["Accounts"])
-app.include_router(bookmarks.router, tags=["Bookmarks"])
 
 
 @app.get("/api/launch-details")
@@ -30,3 +29,4 @@ def launch_details():
             "min": "00",
         }
     }
+

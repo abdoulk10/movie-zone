@@ -1,35 +1,33 @@
 .nav-item {
-    text-align: center;
-    color: white;
+    text-emphasis-color: White;
+    text-align: left;
+    border-left-width: 0cqh;
 }
 
+.home-bm {
+    font-family: sans-serif;
+}
 .navbar {
-    min-height: 90px;
-    background-color: gray;
-    color: black;
-}
-
-.navbar-toggler {
-    border: none;
-    background-color: grey;
+    background-color: #333; /* Background color of the navbar */
+    color: #fff; /* Text color for links and text within the navbar */
+    padding: 10px; /* Padding around the content within the navbar */
+    display: flex; /* Display elements in a row (horizontal) */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center;
+    margin-right: 0px;
+    background: url(https://img.freepik.com/free-photo/crop-clapperboard-near-tickets-popcorn_23-2147698940.jpg?w=826&t=st=1698240471~exp=1698241071~hmac=9908bd6344982c5ed054b89725bc4656e201702747d9baeb1fe3a3d803e98ead);
 }
 
 .nav-link {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-end;
-
-    list-style: none;
-    margin: 0;
-    background:grey;
-    display: flex-start;
-    flex-flow: row;
-    font-weight: bold;
-    text-align: center;
+    font-family: sans-serif;
+    margin-right: 20px;
+    color: white;
+    text-align: justify center;
     color: whitesmoke;
     background: url(https://img.freepik.com/free-photo/crop-clapperboard-near-tickets-popcorn_23-2147698940.jpg?w=826&t=st=1698240471~exp=1698241071~hmac=9908bd6344982c5ed054b89725bc4656e201702747d9baeb1fe3a3d803e98ead);
 
 }
+
 
 .dropdown-menu {
     text-wrap: nowrap;
@@ -37,9 +35,10 @@
     background: url(https://img.freepik.com/free-photo/crop-clapperboard-near-tickets-popcorn_23-2147698940.jpg?w=826&t=st=1698240471~exp=1698241071~hmac=9908bd6344982c5ed054b89725bc4656e201702747d9baeb1fe3a3d803e98ead);
 }
 
-.dropdown-menu {
-    color: rgb(228, 32, 32);
-    text-align: center;
+.dropdown-item {
+    margin-right: 20px;
+    text-decoration: #e6dede;
+    color: white;
 }
 
 .dropdown-item:hover {
@@ -59,4 +58,18 @@
     justify-content: center;
     margin-right: 200px;
     padding: 10px;
+}
+
+.navbar-inverse .navbar-nav .open dropdown-item > li > a,
+.navbar-inverse .navbar-nav .open dropdown-item > li > a:visited {
+  color: white;
+}
+
+.a,
+nav-item {
+  color: white;
+}
+
+.navbar {
+  opacity: 0.7;
 }
