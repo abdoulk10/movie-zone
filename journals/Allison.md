@@ -39,3 +39,12 @@ Abdoul was able to fix the authentication and I continued working on the css fil
 
 10/24/2023
 Tried to change Css files and incorporate bootstrap
+
+10/25/2023
+Worked on merging all branches to main branch.
+
+10/26/2023
+Worked on front-end to improve user experience. Added more information to the README.md file and the API Design.
+
+10/27/2023
+Working on the finishing touches. Added more to the readme and  Unit test. 

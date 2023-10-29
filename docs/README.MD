@@ -84,6 +84,21 @@ Homepage, Popular movies, Trending movies, etc.
 4. `Stretch Goals`: Document “nice-to-haves” in your product roadmap.
 - E.g.: Implement a recommendation engine via collaborative filtering.
 
+-User Authentication and Profiles:
+
+Implement user accounts with registration and login functionality.
+Allow users to create and customize their profiles.
+Provide the ability to save favorite movies and create watchlists.
+
+Advanced Search and Filters:
+
+Implement advanced search options, such as filtering by genre, release year, director, or actor.
+Allow users to create custom search filters and save them for future use.
+
+Multilingual Support:
+
+Offer multilingual support to make the app accessible to a broader audience.
+Allow users to select their preferred language.
 
 5. `Onboarding`: Detail the local dev setup, branching strategy, .env, 3rd party api keys, and CI/CD pipeline.
 - E.g.: Fork the repo, clone locally, install dependencies via `npm install`, and checkout to a feature branch.
@@ -114,11 +129,12 @@ Developer journals are located in the Journals Folder.
 
 8. `Documentation`: Attach DB schemas, wireframes, and API contracts.
 -E.g.: point to the documents dir
-
+-See docs file for attachments.
 
 9. `Issue Tracking`: Link to your Linear or JIRA board for bug tracking.
 -E.g. - links or screenshots, could be included in the doc’s dir
-
+-See docs file for attachments
 
 10. `Testing`: Describe unit tests.
 -E.g. - <student name> : < location of test worked on>
+Allison: get all accounts
