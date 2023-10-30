@@ -11,6 +11,7 @@ function HomePage() {
 
   const [movies, setMovies] = useState([]);
   const [search, setSearch] = useState("");
+  const [term, setTerm] = useState("");
 
   const navigate = useNavigate();
 
@@ -24,9 +25,11 @@ function HomePage() {
   const handleSearch = (e) => {
     e.preventDefault();
 
-    fetch(API_SEARCH + search)
+    fetch(API_SEARCH + term)
       .then((response) => response.json())
       .then((data) => setMovies(data.results));
+
+    setTerm("");
   };
 
   return (
@@ -37,7 +40,7 @@ function HomePage() {
         </div>
           <div className="search_box">
             <form onSubmit={handleSearch}>
-              <input onChange={(e) => setSearch(e.target.value)} />
+              <input value={term} onChange={(e) => setTerm(e.target.value)}/>
               <button>Search</button>
             </form>
           </div>
@@ -52,6 +55,3 @@ function HomePage() {
 }
 
 export default HomePage;
-
-
-

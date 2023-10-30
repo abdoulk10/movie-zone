@@ -55,10 +55,12 @@ function Signup() {
       <div className="offset-3 col-6">
         <div className="shadow p-4 mt-4">
           <div className="text-center">
-            <h1 className="sign-up">Become an IMDme Member! Sign up!</h1>
+            <h1 className="sign-up" style={{ fontSize: '25px' }}>Become a Movie Zone Member! Sign up!</h1>
           </div>
           <form onSubmit={handleSubmit} id="create-user">
             <div className="form-floating mb-3">
+              <label htmlFor="first_name">First Name:</label>
+              <label htmlFor="blank" style={{ color: 'rgba(255, 255, 255, 0)'}}>___</label>
               <input
                 onChange={handleFirstNameChange}
                 placeholder="First Name"
@@ -68,9 +70,10 @@ function Signup() {
                 className="form-control"
                 value={first_name}
               />
-              <label htmlFor="first_name">First Name</label>
             </div>
             <div className="form-floating mb-3">
+              <label htmlFor="last_name">Last Name:</label>
+              <label htmlFor="blank" style={{ color: 'rgba(255, 255, 255, 0)'}}>___</label>
               <input
                 onChange={handleLastNameChange}
                 placeholder="Last Name"
@@ -80,9 +83,10 @@ function Signup() {
                 className="form-control"
                 value={last_name}
               />
-              <label htmlFor="last_name">Last Name</label>
             </div>
             <div className="form-floating mb-3">
+              <label htmlFor="email">Email:</label>
+              <label htmlFor="blank" style={{ color: 'rgba(255, 255, 255, 0)'}}>w______</label>
               <input
                 onChange={handleEmailChange}
                 placeholder="your@email.com"
@@ -92,9 +96,10 @@ function Signup() {
                 className="form-control"
                 value={email}
               />
-              <label htmlFor="email">Email</label>
             </div>
             <div className="form-floating mb-3">
+              <label htmlFor="username">Username:</label>
+              <label htmlFor="blank" style={{ color: 'rgba(255, 255, 255, 0)'}}>...__</label>
               <input
                 onChange={handleUsernameChange}
                 placeholder="username"
@@ -104,28 +109,28 @@ function Signup() {
                 className="form-control"
                 value={username}
               />
-              <label htmlFor="username">Username</label>
             </div>
             <div className="password">
+              <label htmlFor="password">Password:</label>
+              <label htmlFor="blank" style={{ color: 'rgba(255, 255, 255, 0)'}}>____</label>
               <input
                 onChange={handlePasswordChange}
                 placeholder="********"
                 required
-                type="text"
+                type="password"
                 name="password"
                 className="form-control"
                 value={password}
               />
-              <label htmlFor="password">Password</label>
             </div>
             <button className="btn btn-primary" type="submit">
               Sign Up
             </button>
           </form>
+          <button className="link-btn" onClick={() => navigate("/login")}>
+              Already a Movie Zone Member? Sign in!
+          </button>
         </div>
-        <button className="link-btn" onClick={() => navigate("/login")}>
-          Already a Movie Zone Member? Sign in!
-        </button>
       </div>
     </div>
   );

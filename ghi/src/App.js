@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HomePage from "./pages/Homepage.js";
+import HomePage from "./pages/HomePage.js";
 import Mainpage from "./pages/Mainpage.js";
 import Nav from "./Nav.js";
 import Login from "./pages/Login.js";
@@ -12,6 +12,7 @@ import AccountEditForm from "./pages/Accounteditpage.js";
 import TrendingMovies from "./pages/TrendingMovies.js";
 import TopRatedMovies from "./pages/TopRatedMovies.js";
 import LatestMovies from "./pages/LatestMovies.js";
+import RandomMoviePage from "./pages/RandomMovie.js";
 import "./App.css";
 
 function GetToken() {
@@ -40,6 +41,7 @@ function App() {
             <Route path="/AccountDetails" element={<AccountDetailView />} />
             <Route path="/movies/:id/detail" element={<Moviedetail />} />
             <Route path="/AccountDetails/edit" element={<AccountEditForm />} />
+            <Route path="/randommovie" element={<RandomMoviePage />} />
           </Routes>
         </div>
       </AuthProvider>

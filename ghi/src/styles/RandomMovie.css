@@ -18,10 +18,6 @@ body {
     opacity: 0.9;
 }
 
-search_box {
-    flex-wrap: wrap;
-}
-
 @keyframes tornado3D {
     from {
         transform: translateZ(-500px) rotateY(-85deg);
@@ -52,23 +48,19 @@ search_box {
 
 }
 
-.search_box input {
-    border: 0;
-    outline: 0;
-    margin-right: 0.1rem;
-    padding: 0.2rem;
-    border-radius: 1rem;
- }
+.genre {
+    background-color: rgba(128, 128, 128, 0.459);
+  border: 2px solid black;
+  padding: 0.2rem;
+  border-radius: 1rem;
+  margin: 0.5rem;
+}
 
- .search_box button {
-    border: 0;
-    outline: 0;
-    background-color: white;
-    padding: 0.2rem;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
- }
-
- .search_box button:hover {
-    background-color: white;
- }
+.genre-button {
+  background-color: black;
+  color: white;
+  border: 2px solid grey;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  margin: 0.3rem;
+}

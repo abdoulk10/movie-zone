@@ -63,6 +63,15 @@ function Nav() {
                 Top Rated
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink
+                className="nav-link active"
+                aria-current="page"
+                to="/RandomMovie"
+              >
+                Random Movie
+              </NavLink>
+            </li>
           </ul>
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item dropdown">

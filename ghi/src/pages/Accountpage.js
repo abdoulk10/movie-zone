@@ -33,8 +33,8 @@ function AccountDetailView() {
   console.log(userData);
   return (
     <div>
-      <h2 className="account-detail">Account Details</h2>
-      <div className="text-center">
+      <h2 className="account-detail" style={{ fontSize: '30px' }}>Account Details</h2>
+      <div className="text-center" style={{ fontSize: '20px' }}>
         <p>First Name: {userData.first_name}</p>
         <p>Last Name: {userData.last_name}</p>
         <p>Email: {userData.email}</p>

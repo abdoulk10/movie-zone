@@ -29,7 +29,7 @@ function AccountEditForm() {
   return (
     <form onSubmit={handleSubmit}>
       <div className="mb-3">
-        <label htmlFor="first_name" className="form-label">
+        <label htmlFor="first_name" className="form-label" style={{ fontSize: '20px' }}>
           First name
         </label>
         <input
@@ -43,7 +43,7 @@ function AccountEditForm() {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="last_name" className="form-label">
+        <label htmlFor="last_name" className="form-label" style={{ fontSize: '20px' }}>
           Last name
         </label>
         <input
@@ -57,7 +57,7 @@ function AccountEditForm() {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="email" className="form-label">
+        <label htmlFor="email" className="form-label" style={{ fontSize: '20px' }}>
           Email
         </label>
         <input
@@ -71,7 +71,7 @@ function AccountEditForm() {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="username" className="form-label">
+        <label htmlFor="username" className="form-label" style={{ fontSize: '20px' }}>
           Username
         </label>
         <input
@@ -85,7 +85,7 @@ function AccountEditForm() {
         />
       </div>
       <div className="mb-3">
-        <label htmlFor="password" className="form-label">
+        <label htmlFor="password" className="form-label" style={{ fontSize: '20px' }}>
           Password
         </label>
         <input
