@@ -21,7 +21,7 @@
 }
 
 .movie:hover {
-    background-color: black;
+    background-color: #b8bcb9;
 }
 
 .poster{
@@ -30,7 +30,9 @@
     border-radius: 1.5rem;
 }
 
-
+.title {
+    width: 150px;
+}
 .info {
     display: flex;
     justify-content: space-between;
@@ -63,4 +65,8 @@
 .movie:hover .overview {
     transform: translateY(0%);
 
+}
+
+.video-iframe {
+  margin-left: 100px;
 }

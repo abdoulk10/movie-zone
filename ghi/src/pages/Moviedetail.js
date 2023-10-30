@@ -40,9 +40,13 @@ function MovieDetail() {
   }, [id]);
 
   useEffect(() => {
+<<<<<<< HEAD
     fetch(
       `https://api.themoviedb.org/3/movie/${id}/videos?api_key=ade9ac2663bdc8bc0eae7b07d7787d12`
     )
+=======
+    fetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=ade9ac2663bdc8bc0eae7b07d7787d12`)
+>>>>>>> 74d160c571abfb8ba242550faddcc2af51b88785
       .then((response) => response.json())
       .then((data) => setVideos(data.results))
       .catch((error) => console.error("Error fetching videos: ", error));
@@ -50,7 +54,7 @@ function MovieDetail() {
 
   const firstReviews = reviews.slice(0, 8);
 
-  return (
+return (
     <div className="movie-detail">
       <h2 className="title">Title: {movie.title}</h2>
       <div className="videos-container">
@@ -92,6 +96,7 @@ function MovieDetail() {
           <p className="no_reviews">No reviews yet :(</p>
         )}
       </div>
+
     </div>
   );
 }

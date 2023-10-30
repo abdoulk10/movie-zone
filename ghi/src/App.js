@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage.js";
+import HomePage from "./pages/Homepage.js";
 import Mainpage from "./pages/Mainpage.js";
 import Nav from "./Nav.js";
 import Login from "./pages/Login.js";
@@ -37,7 +37,7 @@ function App() {
             <Route path="/logout" element={<Logout />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/homepage" element={<HomePage />} />
+            <Route path="/homepage" element={<HomePage />}/>
             <Route path="/AccountDetails" element={<AccountDetailView />} />
             <Route path="/movies/:id/detail" element={<Moviedetail />} />
             <Route path="/AccountDetails/edit" element={<AccountEditForm />} />

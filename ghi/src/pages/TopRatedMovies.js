@@ -4,8 +4,8 @@ import MovieCard from "./MovieCard";
 import "../styles/Homepage.css";
 
 const TopRatedMovies = () => {
-  const TOP_RATED_URL =
-    "https://api.themoviedb.org/3/movie/top_rated?api_key=ade9ac2663bdc8bc0eae7b07d7787d12";
+
+  const TOP_RATED_URL = "https://api.themoviedb.org/3/movie/top_rated?api_key=ade9ac2663bdc8bc0eae7b07d7787d12";
 
   const [topRatedMovies, setTopRatedMovies] = useState([]);
 
@@ -18,15 +18,17 @@ const TopRatedMovies = () => {
         setTopRatedMovies(data.results);
       })
       .catch((error) => {
-        console.error("Error fetching top-rated movies: ", error);
+          console.error("Error fetching top-rated movies: ", error);
       });
   }, [TOP_RATED_URL, navigate]);
 
+
   return (
     <div className="home-page">
-      <div className="search_nav">
-        <div className="page-title">
-          <h1>Top Rated Movies</h1>
+        <div className="search_nav">
+            <div className="page-title">
+                <h1>Top Rated Movies</h1>
+            </div>
         </div>
       </div>
       <div className="movies">
