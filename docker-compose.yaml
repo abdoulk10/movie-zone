@@ -9,6 +9,8 @@ services:
     restart: always
     volumes:
       - mongo-data:/data/db
+  mongo-express:
+    image: mongo-express
     environment:
       ME_CONFIG_MONGODB_ADMINUSERNAME: admin
       ME_CONFIG_MONGODB_ADMINPASSWORD: secret
@@ -17,6 +19,7 @@ services:
       - "8081:8081"
     depends_on:
       - mongo
+    restart: always
   fastapi:
     environment:
       DATABASE_URL: mongodb://example_user:secret@mongodb
