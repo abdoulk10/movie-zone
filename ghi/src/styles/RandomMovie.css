@@ -68,3 +68,7 @@ body {
 .genre-button:hover {
     background-color: rgb(157, 18, 18);
  }
+
+.page-title {
+    color: rgba(255, 255, 255, 0.734);
+}
