@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routers import accounts
+from routers import accounts, watchlist, movies, tmdb
+import os
 from authenticator import authenticator
 
 
@@ -30,3 +31,7 @@ def launch_details():
         }
     }
 
+
+app.include_router(watchlist.router, tags=["Watchlist"])
+app.include_router(movies.router, tags=["Movies"])
+app.include_router(tmdb.router, tags=["Tmdb"])

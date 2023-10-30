@@ -15,21 +15,12 @@ from queries.accounts import AccountQueries, DuplicateAccountError
 router = APIRouter()
 
 
-# class AccountForm(BaseModel):
-# username: str
-# password: str
-
-
 class AccountTokens(Token):
     account: AccountOut
 
 
-# class HttpError(BaseModel):
-# detail: str
-
-
-@router.get("/api/protected", response_model=bool)
-async def get_protected(
+@router.get("/api/accounts", response_model=bool)
+async def get_accounts(
     account_data: dict = Depends(authenticator.get_current_account_data),
 ):
     return True

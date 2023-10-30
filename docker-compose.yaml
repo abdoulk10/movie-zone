@@ -5,8 +5,11 @@ volumes:
     external: true
 services:
   mongo:
-    image: mongo:5
+    image: mongo
     restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: secret
     volumes:
       - mongo-data:/data/db
   mongo-express:
