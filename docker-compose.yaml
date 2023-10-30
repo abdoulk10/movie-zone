@@ -22,7 +22,7 @@ services:
     restart: always
   fastapi:
     environment:
-      DATABASE_URL: mongodb://example_user:secret@mongodb
+      DATABASE_URL: mongodb://example_user:admin@mongodb
       DB_NAME: db-movie-zone-db
       CORS_HOST: http://localhost:3000
     build:

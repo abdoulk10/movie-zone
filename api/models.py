@@ -62,7 +62,7 @@ class WatchlistMovieOut(WatchlistIn):
 
 
 class Watchlists(BaseModel):
-    watchlists: List[WatchlistOut]
+    watchlist: List[WatchlistOut]
 
 
 class DeleteStatus(BaseModel):

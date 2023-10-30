@@ -7,7 +7,6 @@
   width: device-width;
 }
 
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -40,17 +39,6 @@ login-background,
   font-family: "Quicksand", sans-serif;
 }
 
-.trivia-background {
-  height: auto;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.trivia-box,
-.trivia-modal,
 .login-box {
   background-color: black;
   color: white;
@@ -59,13 +47,6 @@ login-background,
   position: absolute;
 }
 
-.trivia-box {
-  width: 50%;
-  height: 500px;
-  top: 20%;
-  font-size: 18px;
-  padding-top: 60px;
-}
 
 #endless-mode {
   padding-top: 25px;
@@ -74,16 +55,3 @@ login-background,
 #limited-mode {
   margin-top: 25px;
 }
-
-.trivia-endless-button {
-  padding-top: 25px;
-}
-
-#number-questions {
-  padding-top: 25px;
-}
-
-.trivia-buttons {
-  padding-top: 30px;
-}
-

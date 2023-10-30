@@ -37,20 +37,20 @@ function SpecificWatchlist() {
             <th>#</th>
             <th>Image</th>
             <th>Title</th>
-            <th>Artist</th>
+            <th>Actor</th>
             <th>Duration</th>
             <th>Delete</th>
           </tr>
         </thead>
         <tbody>
           {watchlistData?.movies.map((movie, index) => {
-            const artistLinks = movie.artist.map((artist) => (
+            const actorLinks = movie.artist.map((actor) => (
               <Link
                 className="link-primary text-decoration-none"
-                key={artist.id}
-                to={`/tmdb/artists/${artist.id}`}
+                key={actor.id}
+                to={`/tmdb/actor/${actor.id}`}
               >
-                {artist.artist_name}
+                {actor.actor_name}
                 <br />
               </Link>
             ));
@@ -59,9 +59,10 @@ function SpecificWatchlist() {
                 <td>{index + 1}</td>
                 <td>
                   <img
-                    src={movie["album_image"]}
+                    src={movie["movie_image"]}
                     width="50px"
                     height="50px"
+                    alt=""
                   ></img>
                 </td>
                 <td>
@@ -72,13 +73,13 @@ function SpecificWatchlist() {
                     {movie.name}
                   </Link>
                 </td>
-                <td>{artistLinks}</td>
+                <td>{actorLinks}</td>
                 <td>
                   <Link
                     className="link-primary text-decoration-none"
-                    to={`/tmdb/albums/${movie.album_id}`}
+                    to={`/tmdb/albums/${movie.movie_id}`}
                   >
-                    {movie.album}
+                    {movie.movie}
                   </Link>
                 </td>
                 <td>

@@ -53,11 +53,8 @@ function SearchActors() {
                       className="link-primary text-decoration-none"
                       to={`/tmdb/actors/${actors.id}`}
                     >
-                      <img
-                        src={actors.actors_image}
-                        width="90px"
-                        height="90px"
-                      ></img>
+                      <img src={actors.actors_image} width="90px" height="90px" alt="">
+                      </img>
                     </Link>
                   </td>
                   <td>

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
 * {
   margin: 0;
   border: 0;
@@ -20,12 +21,7 @@ body {
   align-items: center;
   flex-direction: column;
 }
-/* h1 {
-  font-size: 5rem;
-  letter-spacing: 0.9px;
 
-  width: fit-content;
-} */
 .search {
   width: 71%;
   margin: 4rem 0 2rem;
@@ -69,7 +65,7 @@ body {
   box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
 }
 
-.container {
+/*.container {
   width: 100%;
   margin-top: 3rem;
   display: flex;
@@ -86,13 +82,12 @@ body {
   overflow: hidden;
   border: none;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
-  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
 }
 .movie div:nth-of-type(1) {
   position: absolute;
   padding: 16px;
   width: 100%;
-  opacity: 0;
+  opacity: 1;
   top: 0;
   color: #f9d3b4;
 }
@@ -146,3 +141,6 @@ body {
 .movie:hover div:nth-of-type(3) h3 {
   opacity: 0;
 }
+*/
+
+

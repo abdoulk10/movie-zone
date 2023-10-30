@@ -27,6 +27,8 @@ function HomePage() {
     fetch(API_SEARCH + search)
       .then((response) => response.json())
       .then((data) => setMovies(data.results));
+
+    setSearch("");
   };
 
   return (
@@ -52,6 +54,3 @@ function HomePage() {
 }
 
 export default HomePage;
-
-
-

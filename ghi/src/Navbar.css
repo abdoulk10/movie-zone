@@ -62,16 +62,14 @@
 
 .navbar-inverse .navbar-nav .open dropdown-item > li > a,
 .navbar-inverse .navbar-nav .open dropdown-item > li > a:visited {
-  color: white;
+    color: white;
 }
 
 .a,
 nav-item {
-  color: white;
+    color: white;
 }
 
 .navbar {
-  opacity: 0.7;
+    opacity: 0.7;
 }
-
-

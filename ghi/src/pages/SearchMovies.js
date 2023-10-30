@@ -74,6 +74,7 @@ function SearchMovies() {
                         src={movie.album_image}
                         width="90px"
                         height="90px"
+                        alt=""
                       ></img>
                     </Link>
                   </td>

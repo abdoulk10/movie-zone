@@ -4,7 +4,7 @@ import { useAuthContext } from "./Authentication";
 import "../styles/Accountpage.css";
 
 function AccountDetailView() {
-  const { accoumt, token } = useAuthContext();
+  const { account, token } = useAuthContext();
   const [userData, setUserData] = useState({});
   const navigate = useNavigate();
 
@@ -28,7 +28,7 @@ function AccountDetailView() {
       };
       fetchUserData();
     }
-  }, [accoumt, token, navigate]);
+  }, [account, token, navigate]);
   console.log(token);
   console.log(userData);
   return (
