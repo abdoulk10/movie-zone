@@ -7,9 +7,6 @@ services:
   mongo:
     image: mongo:5
     restart: always
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: secret
     volumes:
       - mongo-data:/data/db
     environment:
@@ -20,7 +17,6 @@ services:
       - "8081:8081"
     depends_on:
       - mongo
-    restart: always
   fastapi:
     environment:
       DATABASE_URL: mongodb://example_user:secret@mongodb
