@@ -12,6 +12,7 @@ import AccountEditForm from "./pages/Accounteditpage.js";
 import TrendingMovies from "./pages/TrendingMovies.js";
 import TopRatedMovies from "./pages/TopRatedMovies.js";
 import LatestMovies from "./pages/LatestMovies.js";
+import RandomMoviePage from "./pages/RandomMovie.js";
 import "./App.css";
 
 function GetToken() {
@@ -40,6 +41,7 @@ function App() {
             <Route path="/AccountDetails" element={<AccountDetailView />} />
             <Route path="/movies/:id/detail" element={<Moviedetail />} />
             <Route path="/AccountDetails/edit" element={<AccountEditForm />} />
+            <Route path="/randommovie" element={<RandomMoviePage />} />
           </Routes>
         </div>
       </AuthProvider>

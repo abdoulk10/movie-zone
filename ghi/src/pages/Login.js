@@ -13,7 +13,7 @@ function Login() {
     if (loginResponse.isError) {
       //setErrorMessage(loginResponse.error.data.detail);
     }
-    console.log(loginResponse)
+    console.log(loginResponse);
   }, [loginResponse]);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,7 +30,7 @@ function Login() {
         )}
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
-            <label htmlFor="Login_username" className="form-label">
+            <label htmlFor="Login_username" className="form-label" style={{ fontSize: '15px' }}>
               Username
             </label>
             <input
@@ -42,7 +42,7 @@ function Login() {
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="Login_password" className="form-label">
+            <label htmlFor="Login_password" className="form-label" style={{ fontSize: '15px' }}>
               Password
             </label>
             <input

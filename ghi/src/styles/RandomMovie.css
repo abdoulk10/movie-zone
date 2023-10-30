@@ -1,0 +1,70 @@
+.home-page {
+    background-image: url(https://img.freepik.com/free-photo/crop-clapperboard-near-tickets-popcorn_23-2147698940.jpg?w=826&t=st=1698240471~exp=1698241071~hmac=9908bd6344982c5ed054b89725bc4656e201702747d9baeb1fe3a3d803e98ead);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    animation: tornado3D 0.35s;
+}
+
+body {
+    background: linear-gradient(black, white);
+    background-size: small;
+    background-position: fixed;
+    opacity: 0.9;
+}
+
+@keyframes tornado3D {
+    from {
+        transform: translateZ(-500px) rotateY(-85deg);
+        opacity: 0;
+     }
+    to {
+        transform: translateZ(0) rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+.card-list {
+  perspective: 1000px;
+}
+
+.card-list > div {
+  animation: tornado3D 0.35s;
+}
+
+.movie {
+    color: black;
+}
+
+.movies {
+    text-decoration: rgb(21, 90, 150);
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.genre {
+    background-color: rgba(128, 128, 128, 0.459);
+  border: 2px solid black;
+  padding: 0.2rem;
+  border-radius: 1rem;
+  margin: 0.5rem;
+}
+
+.genre-button {
+  background-color: black;
+  color: white;
+  border: 2px solid grey;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  margin: 0.3rem;
+}
+
+.genre-button:hover {
+    background-color: rgb(157, 18, 18);
+ }
