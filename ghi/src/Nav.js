@@ -24,11 +24,6 @@ function Nav() {
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                          <NavLink className="nav-link active" aria-current="page" to="/Bookmarkedmovies">
-                          Bookmarks
-                          </NavLink>
-                        </li>
-                        <li className="nav-item">
                           <NavLink className="nav-link active" aria-current="page" to="/LatestMovies">
                           Latest Movies
                           </NavLink>
